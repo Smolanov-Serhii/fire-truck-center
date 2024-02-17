@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     function MobMenuInit(){
         if ($(".header__mob").length){
             $( ".header__burger" ).on( "click", function() {
@@ -78,22 +79,16 @@ $(document).ready(function () {
     PopupInit();
 
     function ReviewsContainer(){
-        var swiper = new Swiper(".reviews .swiper-container", {
-            speed: 500,
-            effect: 'fade',
-            autoHeight: true, //enable auto height
-            slidesPerView: 1,
-            spaceBetween: 20,
-            mousewheel: {
-                releaseOnEdges: true,
-            },
-            navigation: {
-                nextEl: ".reviews .clinic__slider-next",
-                prevEl: ".reviews .clinic__slider-prev",
+        var swiper = new Swiper(".featured .swiper", {
+            slidesPerView: 4,
+            spaceBetween: 24,
+            pagination: {
+                el: ".featured .swiper-pagination",
+                clickable: true,
             },
         });
     }
-    if ($('.reviews').length) {
+    if ($('.featured').length) {
         ReviewsContainer();
     }
 

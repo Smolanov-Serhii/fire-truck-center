@@ -1,7 +1,6 @@
 @import "normalize";
 @import "aos";
 @import "preloader";
-@import "swiper-bundle";
 @import "default";
 $transition: 0.2s;
 $px: 0.0520833333333333;
@@ -35,8 +34,7 @@ html{
   }
 }
 body{
-  //background-color: #FFFFFF;
-  background-color: lightslategray;
+  background-color: #FFFFFF;
   display: flex;
   flex-direction: column;
   height: auto;
@@ -101,14 +99,91 @@ main{
 }
 .section-title{
   font-size: 4rem;
-  font-weight: 600;
+  font-weight: 800;
   line-height: 98.3%;
-  position: relative;
-  font-family: 'Montserrat', sans-serif;
+  color: #1D1D1D;
+  text-transform: uppercase;
+  strong, b{
+    color: #C92D36;
+    font-weight: 800;
+  }
+}
+.button-skew{
+  display: inline-flex;
+  align-items: center;
+  padding:0 40px;
+  height:51px;
+  color:#fff;
+  text-decoration:none;
+  font-size:1.6rem;
+  font-weight:600;
+  letter-spacing:0.05em;
+  text-transform:uppercase;
+  background:#C92D36;
+  text-align:center;
+  position:relative;
+  cursor: pointer;
+  &:before {
+    content:'';
+    display:block;
+    clear:both;
+    width:0;
+    height:0;
+    border-left:16px solid transparent;
+    border-bottom:51px solid #C92D36;
+    position:absolute;
+    top:0;
+    left:-16px;
+  }
+  &:after {
+    content:'';
+    display:block;
+    clear:both;
+    width:0;
+    height:0;
+    border-right:16px solid transparent;
+    border-top:51px solid #C92D36;
+    position:absolute;
+    top:0;
+    right:-16px;
+  }
+}
+.swiper-pagination{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &-bullet{
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    margin: 0 24px;
+    border-radius: 0;
+    background-color: transparent;
+    opacity: 1;
+    &:before{
+      content: "";
+      width: 10px;
+      height: 10px;
+      background-color: #E0E0E0;
+    }
+    &-active{
+      border: 1px solid #1D1D1D;
+      background-color: transparent;
+      &:before{
+        background-color: #1D1D1D;
+      }
+    }
+  }
 }
 
-
+@import "templates/preloader";
 @import "templates/header";
+@import "templates/banner";
+@import "templates/featured";
+@import "templates/text";
 
 @import "templates/footer";
 
