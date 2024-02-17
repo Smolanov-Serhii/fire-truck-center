@@ -103,6 +103,7 @@ main{
   line-height: 98.3%;
   color: #1D1D1D;
   text-transform: uppercase;
+  margin-bottom: 4rem;
   strong, b{
     color: #C92D36;
     font-weight: 800;
@@ -123,6 +124,16 @@ main{
   text-align:center;
   position:relative;
   cursor: pointer;
+  p{
+    color:#fff;
+    margin-bottom: 0;
+    text-decoration:none;
+    font-size:1.6rem;
+    font-weight:600;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    background:#C92D36;
+  }
   &:before {
     content:'';
     display:block;
@@ -184,6 +195,8 @@ main{
 @import "templates/banner";
 @import "templates/featured";
 @import "templates/text";
+@import "templates/equipment";
+@import "templates/form";
 
 @import "templates/footer";
 

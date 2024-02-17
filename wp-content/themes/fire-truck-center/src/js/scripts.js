@@ -107,6 +107,14 @@ $(document).ready(function () {
     }
     TabInit();
 
+    function FormButton(){
+        if ($(".wpcf7-form.init").length){
+            $( ".wpcf7-form.init .button-skew" ).on( "click", function() {
+                $('.wpcf7-form.init .wpcf7-submit').trigger('click');
+            } );
+        }
+    }
+    FormButton();
 
 });
 

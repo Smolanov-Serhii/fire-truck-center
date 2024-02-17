@@ -25,6 +25,8 @@ get_header();
         </section>
         <?php get_template_part( 'template-parts/content', 'featured' ); ?>
         <?php get_template_part( 'template-parts/content', 'text' ); ?>
+        <?php get_template_part( 'template-parts/content', 'equipment' ); ?>
+        <?php get_template_part( 'template-parts/content', 'form' ); ?>
     </main>
 <?php
 
