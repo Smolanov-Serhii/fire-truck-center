@@ -1,0 +1,50 @@
+{
+  "name": "greatVPN",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Smolanov-Serhii/berry.front-end-dev.com.ua.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Smolanov-Serhii/berry.front-end-dev.com.ua/issues"
+  },
+  "homepage": "https://github.com/Smolanov-Serhii/berry.front-end-dev.com.ua#readme",
+  "dependencies": {
+    "@babel/core": "^7.21.8",
+    "browser-sync": "^2.27.10",
+    "del": "^6.1.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.53.0",
+    "swiper": "^8.4.4",
+    "type": "module",
+    "parcel-bundler": "^1.6.1",
+    "three": "0.146.0"
+  },
+  "resolutions": {
+    "@babel/preset-env": "7.13.8"
+  },
+  "devDependencies": {
+    "gulp-webp": "^4.0.1",
+    "@babel/core": "7.2.0",
+    "typescript": "4.4.4"
+  },
+  "keywords": [
+    "javascript",
+    "starter"
+  ]
+}

@@ -1,0 +1,114 @@
+@import "normalize";
+@import "aos";
+@import "preloader";
+@import "swiper-bundle";
+@import "default";
+$transition: 0.2s;
+$px: 0.0520833333333333;
+$rem: 16;
+
+// GENERAL DOCUMENT STYLES
+* {
+  box-sizing: border-box;
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+}
+html{
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+  font-size: 10px;
+  @media all and (max-width: 1400px){
+    font-size: 90%;
+  }
+  @media all and (max-width: 1024px){
+
+  }
+  @media all and (max-width: 768px){
+
+  }
+  @media all and (max-width: 500px){
+
+  }
+}
+body{
+  //background-color: #FFFFFF;
+  background-color: lightslategray;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-height: 100vh;
+  position: relative;
+  @media all and (max-width: 768px){
+    height: auto;
+  }
+}
+.locked{
+  overflow: hidden;
+}
+img{
+  max-width: 100%;
+}
+main{
+  flex: 1;
+}
+.padding-right{
+  padding-right: 156px;
+  @media all and (max-width: 1400px){
+    padding-right: 75px;
+  }
+  @media all and (max-width: 1024px){
+    padding-right: 50px;
+  }
+  @media all and (max-width: 768px){
+    padding-right: 35px;
+  }
+  @media all and (max-width: 500px){
+    padding-right: 20px;
+  }
+}
+.padding-left{
+  padding-left: 156px;
+  @media all and (max-width: 1400px){
+    padding-left: 75px;
+  }
+  @media all and (max-width: 1024px){
+    padding-left: 50px;
+  }
+  @media all and (max-width: 768px){
+    padding-left: 35px;
+  }
+  @media all and (max-width: 500px){
+    padding-left: 20px;
+  }
+}
+.main-container{
+  max-width: 1920px;
+  margin: auto;
+  width: 100%;
+  @extend .padding-left;
+  @extend .padding-right;
+}
+.small-container {
+  max-width: 1475px;
+  margin: auto;
+  width: 100%;
+  @extend .padding-left;
+  @extend .padding-right;
+}
+.section-title{
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 98.3%;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+@import "templates/header";
+
+@import "templates/footer";
+
