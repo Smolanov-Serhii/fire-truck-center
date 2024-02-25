@@ -91,7 +91,7 @@ main{
   @extend .padding-right;
 }
 .small-container {
-  max-width: 1475px;
+  max-width: 1363px;
   margin: auto;
   width: 100%;
   @extend .padding-left;
@@ -124,6 +124,7 @@ main{
   text-align:center;
   position:relative;
   cursor: pointer;
+  border: none;
   p{
     color:#fff;
     margin-bottom: 0;
@@ -189,6 +190,17 @@ main{
     }
   }
 }
+.wpcf7-response-output{
+  display: none!important;
+}
+.wpcf7-not-valid-tip{
+  text-align: left;
+  color: rgba(201, 45, 54, 1);
+  font-size: 12px;
+}
+.wpcf7-not-valid{
+  border: 1px solid rgba(201, 45, 54, 1)!important;
+}
 
 @import "templates/preloader";
 @import "templates/header";
@@ -197,6 +209,14 @@ main{
 @import "templates/text";
 @import "templates/equipment";
 @import "templates/form";
+@import "templates/banner-image";
+@import "templates/three-column";
+@import "templates/contacts-form";
+@import "templates/popup";
+@import "templates/sell-form";
+@import "templates/sale";
+@import "templates/truck-single";
+@import "templates/popup-truck";
 
 @import "templates/footer";
 

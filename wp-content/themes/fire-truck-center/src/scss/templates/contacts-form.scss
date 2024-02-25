@@ -1,0 +1,71 @@
+.contacts-form{
+  margin: 96px auto 32px auto;
+  &__container{
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__form{
+    width: 520px;
+    padding: 51px 0;
+    .button-skew{
+      margin-right: 16px;
+    }
+    form{
+      text-align: right;
+      > p{
+        margin-bottom: 36px;
+        span{
+          margin-bottom: 26px;
+          display: inline-block;
+          width: 100%;
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    input{
+      width: 100%;
+      border: 1px solid rgba(224, 224, 224, 1);
+      border-radius: 3px;
+      padding: 18px;
+      font-size: 16px;
+      font-weight: 400;
+      &::placeholder{
+        color: rgba(189, 189, 189, 1);
+      }
+    }
+    input{
+      width: 100%;
+      font-weight: 400;
+      font-size: 16px;
+      color: rgba(29, 29, 29, 1);
+      padding: 18px;
+      border-radius: 3px;
+      border: 1px solid rgba(29, 29, 29, 1);
+      &:focus, {
+        border: 1px solid rgba(29, 29, 29, 1);
+      }
+      &:placeholder-shown:not(:focus) {
+        border: 1px solid rgba(224, 224, 224, 1);
+      }
+    }
+  }
+  &__map{
+    width: calc(100% - 680px);
+    border-radius: 5px;
+    border: 1px solid rgba(29, 29, 29, 1);
+    overflow: hidden;
+    iframe {
+      height:100%;
+      width:100%;
+      border:0;
+      filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+ */
+      filter: gray; /* IE6-9 */
+      -webkit-filter: grayscale(99%); /* Chrome 19+ & Safari 6+ */
+      -webkit-backface-visibility: hidden;  /* Fix for transition flickering */
+    }
+  }
+}

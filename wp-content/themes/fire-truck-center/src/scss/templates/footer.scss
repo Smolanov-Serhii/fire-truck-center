@@ -48,6 +48,8 @@
       letter-spacing: 0.03em;
       color: #4f4f4f;
       text-decoration: none;
+    }
+    &-lnk, &-item a{
       &:hover{
         text-decoration: underline;
       }

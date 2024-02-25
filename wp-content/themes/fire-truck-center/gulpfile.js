@@ -38,7 +38,7 @@ const scriptFiles = [
    // './src/js/two-img.js',
    // './src/js/img-comp.js',
    // './src/js/feedback.js',
-   // './src/js/jquery.selectric.js',
+   './src/js/jquery.selectric.js',
    // './src/js/swiper-bundle.js',
    // './src/js/jquery.onepage-scroll.js',
    // './src/client/js/jquery.mCustomScrollbar.js',

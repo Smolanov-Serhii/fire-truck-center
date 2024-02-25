@@ -3,8 +3,8 @@ $selectric-secondary-color: rgba(29,143,189,1) !default;                        
 $selectric-text-color:      #000B44 !default;                                              // Color used in label
 $selectric-bg-color:        #FFFFFF !default;                                           // Background color
 $selectric-btn-bg-color:    #FFFFFF !default;                                           // Button background color
-$selectric-height:          57px !default;                                              // Outer height
-$selectric-spacing:         31px !default;                                              // Label left padding
+$selectric-height:          55px !default;                                              // Outer height
+$selectric-spacing:         18px !default;                                              // Label left padding
 $selectric-border-width:    1px !default;                                               // Outer border width
 $selectric-border-radius:   5px !default;                                               // Border radius
 $selectric-inner-height:    $selectric-height - ($selectric-border-width * 2) !default; // Inner height
@@ -194,7 +194,7 @@ $selectric-font-size:       16px !default;                                      
 
   li {
     display: block;
-    padding: 10px 10px 10px 31px;
+    padding: 10px 10px 10px 18px;
     color: #666;
     cursor: pointer;
     @media all and (max-width: 500px) {

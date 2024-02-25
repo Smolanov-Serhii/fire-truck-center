@@ -1,0 +1,152 @@
+.sale{
+  margin: 47px auto;
+  &__container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__sidebar{
+    width: 384px;
+    background-color: rgba(243, 243, 243, 1);
+    border-radius: 5px;
+    padding: 30px 20px 0 20px;
+    form{
+      .sf-field-submit{
+        display: none;
+      }
+      > ul{
+        > li{
+          padding-top: 0;
+          padding-bottom: 0;
+          margin-bottom: 30px;
+          &:last-child{
+            padding-bottom: 0;
+          }
+          @import "../selectric";
+          ul{
+            background-color: #FFFFFF;
+            max-height: 166px;
+            overflow-y: scroll;
+            padding: 18px 18px 6px 18px;
+            li{
+              display: flex;
+              padding-top: 0;
+              padding-bottom: 10px;
+              label{
+                font-size: 16px;
+                font-weight: 400;
+              }
+            }
+          }
+        }
+        h4{
+          padding-top: 0;
+          font-size: 16px;
+          font-weight: 600;
+          padding-bottom: 10px;
+        }
+      }
+      .meta-slider{
+        height: 9px;
+      }
+      &.searchandfilter .noUi-horizontal .noUi-handle{
+        top: -8px;
+      }
+      &.searchandfilter .noUi-connect{
+        background-color: rgba(201, 45, 54, 1);
+      }
+      .noUi-handle{
+        background-color: rgba(201, 45, 54, 1);
+        box-shadow: none;
+        border: none;
+        &:before{
+          display: none;
+        }
+        &:after{
+          background-color: rgba(255, 255, 255, 1);
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          left: 7px!important;
+        }
+      }
+    }
+
+    label{
+      display: inline-block;
+      width: 100%;
+    }
+    select{
+      width: 100%;
+    }
+    .sf-meta-range{
+      label{
+        pointer-events: none;
+        width: auto;
+      }
+      input{
+        font-size: 14px;
+        font-weight: 400;
+        color: rgba(29, 29, 29, 1);
+        border: none;
+      }
+      .sf-range-values-seperator{
+
+      }
+    }
+    .meta-slider{
+      max-width: none;
+      width: calc(100% - 22px);
+      margin-left: 6px;
+      margin-top: 21px;
+    }
+  }
+  &__main{
+    width: calc(100% - 408px);
+  }
+  &__result{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -24px;
+  }
+  &__item{
+    width: calc(33.3333% - 24px);
+    margin-right: 24px;
+    margin-bottom: 35px;
+    cursor: pointer;
+    position: relative;
+    &-lnk{
+      position: absolute;
+      bottom: -13px;
+      right: 0;
+      cursor: pointer;
+    }
+    &-image{
+      width: 100%;
+      height: 259px;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-bottom: 22px;
+      img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &-title{
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+    &-sku{
+      font-size: 16px;
+      color: rgba(130, 130, 130, 1);
+      margin-bottom: 13px;
+    }
+    &-price{
+      color: rgba(0, 0, 0, 1);
+      font-size: 20px;
+      font-weight: 700;
+    }
+  }
+}

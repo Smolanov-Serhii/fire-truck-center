@@ -1,0 +1,47 @@
+.sell-form{
+  &__container{
+    margin: 65px auto;
+    form{
+      text-align: center;
+      label{
+        font-size: 16px;
+        font-weight: 400;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        margin-right: 24px;
+        text-align: left;
+        input{
+          width: 100%;
+          font-weight: 400;
+          font-size: 16px;
+          color: rgba(29, 29, 29, 1);
+          padding: 18px;
+          border-radius: 3px;
+          border: 1px solid rgba(29, 29, 29, 1);
+          &::placeholder{
+            color: rgba(255,255,255,0);
+          }
+          &:focus, {
+            border: 1px solid rgba(29, 29, 29, 1);
+          }
+          &:placeholder-shown:not(:focus) {
+            border: 1px solid rgba(224, 224, 224, 1);
+          }
+        }
+      }
+      span{
+        display: inline-block;
+        margin-bottom: 30px;
+      }
+      .row{
+        p{
+          display: flex;
+          flex-wrap: wrap;
+          margin-right: -24px;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

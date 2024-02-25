@@ -58,22 +58,11 @@ $(document).ready(function () {
     function PopupInit(){
         if ($(".popup").length){
             document.addEventListener( 'wpcf7mailsent', function( event ) {
-                $('.popup').fadeOut(300);
-                // $('#success-send').fadeIn(300);
-                // $('.wpcf7-response-output').empty();
-                barba.go($('.popup').data('thanks'));
-                // setTimeout(function (){
-                //     $('#success-send').fadeOut(300);
-                // }, 2000);
-            }, false );
-            $(".js-form").click(function () {
-                // $('body').removeClass('locked');
                 $('.popup').fadeIn(300);
-            });
-            $(".popup__close").click(function () {
-                // $('body').removeClass('locked');
-                $(this).closest('.popup').fadeOut(300);
-            });
+                setTimeout(function (){
+                    $('.popup').fadeOut(300);
+                }, 2000);
+            }, false );
         };
     }
     PopupInit();
@@ -100,21 +89,72 @@ $(document).ready(function () {
                 $(".tabs-elements .tabs-content-item").hide().eq($(this).index()) .css("display", "block")
                     .hide()
                     .fadeIn();
-                    PotrfolioCosm();
             }).eq(0).addClass("active");
             $(".tabs-elements .tabs-content-item").eq(0).addClass("active");
         }
     }
     TabInit();
 
-    function FormButton(){
-        if ($(".wpcf7-form.init").length){
-            $( ".wpcf7-form.init .button-skew" ).on( "click", function() {
-                $('.wpcf7-form.init .wpcf7-submit').trigger('click');
+    $(function() {
+        $('select').selectric();
+    });
+    $('select').selectric().on('change', function() {
+        $('.sf-field-submit input').trigger('click');
+
+    });
+    $(document).on("sf:ajaxfinish", ".searchandfilter", function(){
+        console.log("ajax complete");
+        //so load your lightbox or JS scripts here again
+    });
+    function PopupTruck(){
+        if ($(".sale__result").length){
+            $( ".sale__item" ).on( "click", function() {
+                let ItemLnk = $(this).data('href');
+                $.ajax({
+                    type: 'GET', //or POST i don't know which one
+                    url: ItemLnk, //or should this be the url: ?
+                    success: function(data){
+                        $html = $(data).find('.truck-single');
+                        $html.appendTo(".popup-truck__wrapper");
+                        SwiperThumb();
+                        TabInit();
+                        $('.popup-truck').fadeIn(300);
+                    }
+                });
+                return false;
+            } );
+            $( ".popup-truck__close" ).on( "click", function() {
+                $('.popup-truck').fadeOut(300);
+                setTimeout(function (){
+                    $('.popup-truck__wrapper').empty();
+                }, 300);
             } );
         }
     }
-    FormButton();
+    PopupTruck();
+
+    function SwiperThumb() {
+        var SmallSwiper = new Swiper(".truck-single__img .small", {
+            spaceBetween: 17,
+            slidesPerView: 5,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+        var BigSwiper = new Swiper(".truck-single__img .big", {
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            thumbs: {
+                swiper: SmallSwiper,
+            },
+        });
+    }
+
+    if ($('.truck-single__img').length) {
+        SwiperThumb();
+    }
 
 });
 
