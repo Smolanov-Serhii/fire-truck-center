@@ -1,4 +1,4 @@
-<section class="form">
+<section class="form" id="send-form">
     <div class="form__image">
         <img src="<?php echo get_template_directory_uri(); ?>/img/form/bg.png" alt="For Immediate Parts, Service or Sales Assistance">
     </div>
