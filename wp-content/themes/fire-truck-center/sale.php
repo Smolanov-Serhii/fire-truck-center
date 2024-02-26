@@ -11,9 +11,29 @@ get_header();
         <div class="sale">
             <div class="sale__container main-container">
                 <aside class="sale__sidebar">
+                    <div class="sale__sidebar-close">
+                        <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 1L1 20M21 20L1 1" stroke="black" stroke-width="2"/>
+                        </svg>
+                    </div>
                     <?php echo do_shortcode('[searchandfilter id="59"]')?>
                 </aside>
                 <div class="sale__main">
+                    <div class="sale__main-header">
+                        <div class="filter">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1106_14204)">
+                                    <path d="M14.1 14.1L20.5 7.7V4.5H4.5V7.7L10.9 14.1V20.5L14.1 17.3V14.1Z" fill="white"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1106_14204">
+                                        <rect width="16" height="16" fill="white" transform="translate(4.5 4.5)"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            Filter
+                        </div>
+                    </div>
                     <div class="sale__result" id="result">
                         <?php
                         $args = array(
@@ -31,30 +51,59 @@ get_header();
                                 $sku = get_field('sku', $postpers_id);
                                 $price = get_field('_price', $postpers_id);
                                 ?>
-
-                                <div data-href="<?php the_permalink();?>" class="sale__item">
-                                    <div class="sale__item-image">
-                                        <?php the_post_thumbnail( 'full' );?>
+                                <?php
+                                if ( wp_is_mobile() ) {
+                                    ?>
+                                    <a href="<?php the_permalink();?>" class="sale__item" target="_blank" title="<?php the_title(); ?>">
+                                        <div class="sale__item-image">
+                                            <?php the_post_thumbnail( 'full' );?>
+                                        </div>
+                                        <h3 class="sale__item-title">
+                                            <?php the_title(); ?>
+                                        </h3>
+                                        <div class="sale__item-sku">
+                                            <?php echo $sku; ?>
+                                        </div>
+                                        <div class="sale__item-price">
+                                            $<?php echo number_format($price, 2, '.', ','); ; ?>
+                                        </div>
+                                        <div class="sale__item-lnk">
+                                            <svg width="61" height="41" viewBox="0 0 61 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M15.4999 -9.65013e-07L28.9999 -2.18894e-06L17.4615 41L3.96143 41L15.4999 -9.65013e-07Z" fill="#C92D36"/>
+                                                <path d="M34.25 -6.1975e-05L39.75 -6.24995e-05L28.5 40.9999L23 40.9999L34.25 -6.1975e-05Z" fill="#C92D36"/>
+                                                <path d="M11.3704 -9.94036e-07L61 0.000112342L61 41L3.05188e-06 40.9999L11.3704 -9.94036e-07Z" fill="#C92D36"/>
+                                                <path d="M26.9998 23L26.9998 17L34.9998 17L34.9998 12.16L42.8398 20L34.9998 27.84L34.9998 23L26.9998 23Z" fill="white"/>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                    <?php
+                                } else {
+                                    ?>
+                                    <div data-href="<?php the_permalink();?>" class="sale__item sale__item-desctop">
+                                        <div class="sale__item-image">
+                                            <?php the_post_thumbnail( 'full' );?>
+                                        </div>
+                                        <h3 class="sale__item-title">
+                                            <?php the_title(); ?>
+                                        </h3>
+                                        <div class="sale__item-sku">
+                                            <?php echo $sku; ?>
+                                        </div>
+                                        <div class="sale__item-price">
+                                            $<?php echo number_format($price, 2, '.', ','); ; ?>
+                                        </div>
+                                        <div class="sale__item-lnk">
+                                            <svg width="61" height="41" viewBox="0 0 61 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M15.4999 -9.65013e-07L28.9999 -2.18894e-06L17.4615 41L3.96143 41L15.4999 -9.65013e-07Z" fill="#C92D36"/>
+                                                <path d="M34.25 -6.1975e-05L39.75 -6.24995e-05L28.5 40.9999L23 40.9999L34.25 -6.1975e-05Z" fill="#C92D36"/>
+                                                <path d="M11.3704 -9.94036e-07L61 0.000112342L61 41L3.05188e-06 40.9999L11.3704 -9.94036e-07Z" fill="#C92D36"/>
+                                                <path d="M26.9998 23L26.9998 17L34.9998 17L34.9998 12.16L42.8398 20L34.9998 27.84L34.9998 23L26.9998 23Z" fill="white"/>
+                                            </svg>
+                                        </div>
                                     </div>
-                                    <h3 class="sale__item-title">
-                                        <?php the_title(); ?>
-                                    </h3>
-                                    <div class="sale__item-sku">
-                                        <?php echo $sku; ?>
-                                    </div>
-                                    <div class="sale__item-price">
-                                        $<?php echo number_format($price, 2, '.', ','); ; ?>
-                                    </div>
-                                    <div class="sale__item-lnk">
-                                        <svg width="61" height="41" viewBox="0 0 61 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M15.4999 -9.65013e-07L28.9999 -2.18894e-06L17.4615 41L3.96143 41L15.4999 -9.65013e-07Z" fill="#C92D36"/>
-                                            <path d="M34.25 -6.1975e-05L39.75 -6.24995e-05L28.5 40.9999L23 40.9999L34.25 -6.1975e-05Z" fill="#C92D36"/>
-                                            <path d="M11.3704 -9.94036e-07L61 0.000112342L61 41L3.05188e-06 40.9999L11.3704 -9.94036e-07Z" fill="#C92D36"/>
-                                            <path d="M26.9998 23L26.9998 17L34.9998 17L34.9998 12.16L42.8398 20L34.9998 27.84L34.9998 23L26.9998 23Z" fill="white"/>
-                                        </svg>
-                                    </div>
-                                </div>
-
+                                    <?php
+                                }
+                                ?>
                             <?php }
                         }
                         wp_reset_query(); ?>

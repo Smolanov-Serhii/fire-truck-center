@@ -1,5 +1,8 @@
 .three-column{
   margin-top: -59px;
+  @media all and (max-width: 1680px){
+    margin-top: 4rem;
+  }
   &__container{
 
   }
@@ -7,27 +10,60 @@
     display: flex;
     align-items: stretch;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
   &__item{
     width: calc(33.333% - 16px);
     display: flex;
     align-items: center;
     position: relative;
-    padding: 40px 70px 40px 136px;
+    padding: 40px 40px 40px 118px;
     background-color: rgba(243, 243, 243, 1);
     border-radius: 5px;
     font-size: 16px;
     font-weight: 500;
     color: rgba(29, 29, 29, 1);
+    @media all and (max-width: 1680px){
+      flex-direction: column;
+      padding: 40px;
+      text-align: center;
+    }
+    @media all and (max-width: 1440px){
+
+    }
+    @media all and (max-width: 1200px){
+
+    }
+    @media all and (max-width: 1024px){
+
+    }
+    @media all and (max-width: 768px){
+      padding: 20px;
+      font-size: 14px;
+    }
+    @media all and (max-width: 500px){
+      width: 100%;
+      margin-bottom: 10px;
+    }
     svg{
       position: absolute;
       left: 34px;
       top: 34px;
+      @media all and (max-width: 1680px){
+        position: static;
+        margin-bottom: 40px;
+      }
+      @media all and (max-width: 768px){
+        margin-bottom: 20px;
+      }
     }
     .wrapper{
       display: flex;
       align-items: center;
       flex-wrap: wrap;
+      @media all and (max-width: 1440px){
+        flex-direction: column;
+      }
       a{
         text-decoration: none;
         color: inherit;
@@ -35,6 +71,9 @@
       span{
         display: inline-block;
         margin: 0 20px;
+        @media all and (max-width: 1440px){
+          display: none;
+        }
       }
     }
   }

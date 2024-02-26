@@ -20,18 +20,6 @@ html{
   font-style: normal;
   font-variation-settings: "slnt" 0;
   font-size: 10px;
-  @media all and (max-width: 1400px){
-    font-size: 90%;
-  }
-  @media all and (max-width: 1024px){
-
-  }
-  @media all and (max-width: 768px){
-
-  }
-  @media all and (max-width: 500px){
-
-  }
 }
 body{
   background-color: #FFFFFF;
@@ -55,6 +43,12 @@ main{
 }
 .padding-right{
   padding-right: 156px;
+  @media all and (max-width: 1800px){
+    padding-right: 125px;
+  }
+  @media all and (max-width: 1600px){
+    padding-right: 100px;
+  }
   @media all and (max-width: 1400px){
     padding-right: 75px;
   }
@@ -70,6 +64,12 @@ main{
 }
 .padding-left{
   padding-left: 156px;
+  @media all and (max-width: 1800px){
+    padding-left: 125px;
+  }
+  @media all and (max-width: 1600px){
+    padding-left: 100px;
+  }
   @media all and (max-width: 1400px){
     padding-left: 75px;
   }
@@ -98,12 +98,36 @@ main{
   @extend .padding-right;
 }
 .section-title{
-  font-size: 4rem;
+  font-size: 40px;
   font-weight: 800;
   line-height: 98.3%;
   color: #1D1D1D;
   text-transform: uppercase;
   margin-bottom: 4rem;
+  @media all and (max-width: 1600px){
+    font-size: 38px;
+    margin-bottom: 36px;
+  }
+  @media all and (max-width: 1440px){
+    font-size: 36px;
+    margin-bottom: 34px;
+  }
+  @media all and (max-width: 1200px){
+    font-size: 34px;
+    margin-bottom: 32px;
+  }
+  @media all and (max-width: 1024px){
+    font-size: 32px;
+    margin-bottom: 28px;
+  }
+  @media all and (max-width: 768px){
+    font-size: 30px;
+    margin-bottom: 24px;
+  }
+  @media all and (max-width: 500px){
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
   strong, b{
     color: #C92D36;
     font-weight: 800;
@@ -217,6 +241,7 @@ main{
 @import "templates/sale";
 @import "templates/truck-single";
 @import "templates/popup-truck";
+@import "templates/mobile-menu";
 
 @import "templates/footer";
 

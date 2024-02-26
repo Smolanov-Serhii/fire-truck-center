@@ -10,6 +10,37 @@
     background-color: rgba(243, 243, 243, 1);
     border-radius: 5px;
     padding: 30px 20px 0 20px;
+    transition: 0.3s ease-in-out;
+    position: relative;
+    @media all and (max-width: 1200px){
+      padding: 50px 20px 0 20px;
+      height: 100%;
+      overflow-y: scroll
+    }
+    &-close{
+      display: none;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      @media all and (max-width: 1200px){
+        display: inline-block;
+      }
+    }
+    @media all and (max-width: 1440px){
+      width: 320px;
+    }
+    @media all and (max-width: 1200px){
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      transform: translateX(-120%);
+      z-index: 100;
+      &.active{
+        transform: translateX(0);
+      }
+    }
     form{
       .sf-field-submit{
         display: none;
@@ -103,11 +134,43 @@
   }
   &__main{
     width: calc(100% - 408px);
+    @media all and (max-width: 1440px){
+      width: calc(100% - 340px);
+    }
+    @media all and (max-width: 1200px){
+      width: 100%;
+    }
+    &-header{
+      display: none;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(29, 29, 29, 1);
+      @media all and (max-width: 1200px){
+        display: block;
+      }
+      .filter{
+        padding: 20px 40px;
+        font-size: 16px;
+        background-color: rgba(201, 45, 54, 1);
+        border-radius: 5px;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: #FFFFFF;
+        svg{
+          margin-right: 10px;
+        }
+      }
+    }
   }
   &__result{
     display: flex;
     flex-wrap: wrap;
     margin-right: -24px;
+    @media all and (max-width: 768px){
+      margin-right: -10px;
+    }
   }
   &__item{
     width: calc(33.3333% - 24px);
@@ -115,6 +178,15 @@
     margin-bottom: 35px;
     cursor: pointer;
     position: relative;
+    text-decoration: none;
+    @media all and (max-width: 768px){
+      width: calc(50% - 10px);
+      margin-right: 10px;
+    }
+    @media all and (max-width: 500px){
+      width: 100%;
+      margin-right: 10px;
+    }
     &-lnk{
       position: absolute;
       bottom: -13px;
@@ -127,6 +199,9 @@
       border-radius: 5px;
       overflow: hidden;
       margin-bottom: 22px;
+      @media all and (max-width: 1440px){
+        height: 200px;
+      }
       img{
         object-fit: cover;
         width: 100%;
@@ -137,6 +212,7 @@
       font-size: 20px;
       font-weight: 500;
       margin-bottom: 8px;
+      color: rgba(29, 29, 29, 1);
     }
     &-sku{
       font-size: 16px;

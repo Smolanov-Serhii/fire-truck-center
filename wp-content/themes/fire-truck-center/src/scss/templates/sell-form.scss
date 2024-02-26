@@ -11,6 +11,10 @@
         flex: 1;
         margin-right: 24px;
         text-align: left;
+        @media all and (max-width: 768px){
+          width: 100%;
+          flex: auto;
+        }
         input{
           width: 100%;
           font-weight: 400;

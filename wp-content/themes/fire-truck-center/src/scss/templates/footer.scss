@@ -7,6 +7,25 @@
   }
   &__brand{
     width: 29.9rem;
+    @media all and (max-width: 1600px){
+
+    }
+    @media all and (max-width: 1440px){
+
+    }
+    @media all and (max-width: 1200px){
+      width: 100%;
+      margin-bottom: 40px;
+    }
+    @media all and (max-width: 1024px){
+      margin-bottom: 30px;
+    }
+    @media all and (max-width: 768px){
+
+    }
+    @media all and (max-width: 500px){
+      margin-bottom: 20px;
+    }
   }
   &__nav{
     display: flex;
@@ -14,8 +33,22 @@
     width: 70%;
     justify-content: space-between;
     margin-bottom: 1.5rem;
+    @media all and (max-width: 1200px){
+      width: 100%;
+    }
     &-column{
       width: 25%;
+      @media all and (max-width: 1024px){
+        width: 50%;
+        margin-bottom: 40px;
+      }
+      @media all and (max-width: 500px){
+        width: 100%;
+        margin-bottom: 40px;
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
     }
     &-head{
       font-weight: 600;

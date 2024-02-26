@@ -7,9 +7,12 @@
             <?php echo the_field('content_text_block', $post_id) ?>
         </div>
         <div class="text__lnk">
-            <div class="button-skew">
+            <?php
+            $booking_url = get_permalink('60');
+            ?>
+            <a href="<?php echo $booking_url;?>" class="button-skew">
                 SEE NEW LISTINGS
-            </div>
+            </a>
         </div>
     </div>
 </section>

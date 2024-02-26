@@ -66,5 +66,41 @@
                 <a href="tel:(610) 347-3878">(610) 347-3878</a>
             </div>
         </div>
+        <div class="header__burger padding-right">
+            <div class="header__burger-button">
+                <span>Menu</span>
+                <div class="header__burger-wrapper">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <div class="mobile-menu__container">
+                <div class="mobile-menu-close">
+                    <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M32 1L1 31M32 31L1 1" stroke="#FFFFFF" stroke-width="2"/>
+                    </svg>
+                </div>
+                <nav class="header__nav">
+                    <?php
+                    wp_nav_menu(
+                        array(
+                            'theme_location' => 'Page-menu',
+                            'menu_id'        => 'primary-menu',
+                        )
+                    );
+                    ?>
+                </nav>
+                <div class="header__contacts-in">
+                    <span>(610) FIRETRUCK</span>
+                    <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3.04031" cy="3.49991" r="2.70865" fill="white"/>
+                    </svg>
+                    <a href="tel:(610) 347-3878">(610) 347-3878</a>
+                </div>
+            </div>
+        </div>
     </div>
 </header>

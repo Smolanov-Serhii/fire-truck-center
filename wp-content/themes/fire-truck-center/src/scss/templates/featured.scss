@@ -1,5 +1,11 @@
 .featured{
   margin: 8rem auto;
+  @media all and (max-width: 768px){
+    margin: 6rem auto;
+  }
+  @media all and (max-width: 500px){
+    margin: 4rem auto;
+  }
   &__container{
 
   }
@@ -24,6 +30,12 @@
       overflow: hidden;
       display: block;
       margin-bottom: 2.2rem;
+      @media all and (max-width: 1024px){
+        height: 225px;
+      }
+      @media all and (max-width: 500px){
+        height: 200px;
+      }
       img{
         object-fit: cover;
         width: 100%;
@@ -40,6 +52,12 @@
     &-code{
       font-weight: 400;
       font-size: 1.6rem;
+      @media all and (max-width: 768px){
+        font-size: 15px;
+      }
+      @media all and (max-width: 500px){
+        font-size: 14px;
+      }
       color: #828282;
     }
     &-title{
@@ -48,6 +66,12 @@
       color: #1D1D1D;
       font-weight: 500;
       margin-bottom: 0.8rem;
+      @media all and (max-width: 768px){
+        font-size: 18px;
+      }
+      @media all and (max-width: 500px){
+        font-size: 16px;
+      }
     }
     &-bottom{
       display: flex;
@@ -63,5 +87,11 @@
   &__pagination{
     position: static;
     margin-top: 5.7rem;
+    @media all and (max-width: 1200px){
+      margin-top: 4rem;
+    }
+    @media all and (max-width: 500px){
+      margin-top: 3rem;
+    }
   }
 }

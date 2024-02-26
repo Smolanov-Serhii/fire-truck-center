@@ -1,5 +1,11 @@
 .contacts-form{
   margin: 96px auto 32px auto;
+  @media all and (max-width: 768px){
+    margin: 4rem auto 20px auto;
+  }
+  @media all and (max-width: 500px){
+    margin: 0 auto 20px auto;
+  }
   &__container{
     display: flex;
     align-items: stretch;
@@ -9,13 +15,25 @@
   &__form{
     width: 520px;
     padding: 51px 0;
+    @media all and (max-width: 1200px){
+      width: calc(50% - 20px);
+    }
+    @media all and (max-width: 768px){
+      width: 100%;
+    }
     .button-skew{
       margin-right: 16px;
     }
     form{
       text-align: right;
+      @media all and (max-width: 768px){
+        text-align: center;
+      }
       > p{
         margin-bottom: 36px;
+        @media all and (max-width: 768px){
+          margin-bottom: 0;
+        }
         span{
           margin-bottom: 26px;
           display: inline-block;
@@ -58,6 +76,14 @@
     border-radius: 5px;
     border: 1px solid rgba(29, 29, 29, 1);
     overflow: hidden;
+    @media all and (max-width: 1200px){
+      width: calc(50% - 20px);
+    }
+    @media all and (max-width: 768px){
+      width: 100%;
+      height: 500px;
+      border: none;
+    }
     iframe {
       height:100%;
       width:100%;

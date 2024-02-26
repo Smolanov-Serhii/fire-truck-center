@@ -1,5 +1,8 @@
 .truck-template-default{
-  padding-top: 156px;
+  padding-top: 200px;
+  @media all and (max-width: 1024px){
+    padding-top: 120px;
+  }
   .header{
     background-color: #1d1d1d;
   }
@@ -10,6 +13,15 @@
   justify-content: space-between;
   &__img{
     width: 607px;
+    img{
+      width: 100%;
+    }
+    @media all and (max-width: 1200px){
+      width: 440px;
+    }
+    @media all and (max-width: 1024px){
+      width: 100%;
+    }
     .big{
       margin-bottom: 20px;
       border-radius: 5px;
@@ -49,12 +61,22 @@
   }
   &__content{
     width: calc(100% - 657px);
+    @media all and (max-width: 1200px){
+      width: calc(100% - 500px);
+    }
+    @media all and (max-width: 1024px){
+      width: 100%;
+    }
   }
   &__title{
     font-size: 36px;
     font-weight: 700;
     margin-bottom: 15px;
     text-align: left;
+    @media all and (max-width: 1024px){
+      margin-top: 40px;
+      font-size: 32px;
+    }
   }
   &__sku{
     font-size: 16px;
@@ -108,6 +130,14 @@
       font-weight: 600;
       cursor: pointer;
       transition: 0.3s ease-in-out;
+      @media all and (max-width: 768px){
+        font-size: 18px;
+        padding: 10px 20px;
+      }
+      @media all and (max-width: 440px){
+        font-size: 16px;
+        padding: 10px 10px;
+      }
       &.active, &:hover{
         color: #FFFFFF;
         background-color: rgba(29, 29, 29, 1);

@@ -1,5 +1,11 @@
 .equipment{
   margin: 8rem auto;
+  @media all and (max-width: 768px){
+    margin: 6rem auto;
+  }
+  @media all and (max-width: 500px){
+    margin: 4rem auto;
+  }
   &__container{
 
   }
@@ -8,6 +14,17 @@
     flex-wrap: wrap;
     margin-right: -28px;
     width: calc(100% + 28px);
+    @media all and (max-width: 1280px){
+      justify-content: center;
+    }
+    @media all and (max-width: 1024px){
+      width: calc(100% + 20px);
+      margin-right: -20px;
+    }
+    @media all and (max-width: 500px){
+      width: calc(100% + 10px);
+      margin-right: -10px;
+    }
   }
   &__item{
     width: calc(20% - 28px);
@@ -20,6 +37,25 @@
     align-items: center;
     border-radius: 5px;
     transition: 0.3s ease-in-out;
+    text-decoration: none;
+    @media all and (max-width: 1280px){
+      width: calc(33% - 28px);
+      margin-bottom: 28px;
+    }
+    @media all and (max-width: 1024px){
+      margin-right: 20px;
+      width: calc(33.3333% - 20px);
+      margin-bottom: 20px;
+    }
+    @media all and (max-width: 768px){
+      width: calc(50% - 20px);
+      margin-bottom: 20px;
+    }
+    @media all and (max-width: 500px){
+      width: calc(50% - 10px);
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
     &:hover{
       background-color: #C92D36;
     }
@@ -29,6 +65,15 @@
       font-weight: 500;
       color: #FFFFFF;
       text-align: center;
+      @media all and (max-width: 1024px){
+        font-size: 18px;
+      }
+      @media all and (max-width: 768px){
+        font-size: 16px;
+      }
+      @media all and (max-width: 500px){
+        font-size: 14px;
+      }
     }
   }
 }

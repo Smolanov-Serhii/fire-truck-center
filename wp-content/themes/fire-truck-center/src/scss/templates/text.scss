@@ -1,5 +1,11 @@
 .text{
   margin: 8rem auto;
+  @media all and (max-width: 768px){
+    margin: 6rem auto;
+  }
+  @media all and (max-width: 500px){
+    margin: 4rem auto;
+  }
   &__container{
 
   }
@@ -12,6 +18,15 @@
       font-weight: 500;
       line-height: 125%;
       margin-bottom: 1em;
+      @media all and (max-width: 1024px){
+        font-size: 18px;
+      }
+      @media all and (max-width: 768px){
+        font-size: 16px;
+      }
+      @media all and (max-width: 500px){
+        font-size: 14px;
+      }
       &:last-child{
         margin-bottom: 0;
       }
@@ -20,5 +35,9 @@
   &__lnk{
     margin-top: 4rem;
     text-align: center;
+    a{
+      color: #FFFFFF;
+      text-decoration: none;
+    }
   }
 }

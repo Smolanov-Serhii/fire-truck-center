@@ -9,11 +9,13 @@
                     while( have_rows('equipment_list', $post_id) ) : the_row();
                         $image = get_sub_field('image_equipment');
                         $title = get_sub_field('title_equipment');
+                        $url = get_sub_field('page_url');
+                        $booking_url = get_permalink('60');
                         ?>
-                            <div class="equipment__item">
+                            <a href="<?php echo $booking_url . '' . $url;?>" class="equipment__item">
                                 <img class="equipment__image" src="<?php echo $image;?>" alt="<?php echo $title;?>">
                                 <h3 class="equipment__item-title"><?php echo $title;?></h3>
-                            </div>
+                            </a>
                         <?php
                     endwhile;
                 endif;
