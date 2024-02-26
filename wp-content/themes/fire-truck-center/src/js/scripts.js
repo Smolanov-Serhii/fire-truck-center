@@ -92,11 +92,11 @@ $(document).ready(function () {
                 },
                 '1024': {
                     slidesPerView: 3,
-                    spaceBetween: 10,
+                    spaceBetween: 20,
                 },
                 '1400': {
                     slidesPerView: 4,
-                    spaceBetween: 10,
+                    spaceBetween: 24,
                 },
             },
         });
