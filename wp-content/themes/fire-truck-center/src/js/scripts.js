@@ -167,11 +167,13 @@ $(document).ready(function () {
         var SmallSwiper = new Swiper(".truck-single__img .small", {
             spaceBetween: 17,
             slidesPerView: 5,
+            autoHeight: true,
             freeMode: true,
             watchSlidesProgress: true,
         });
         var BigSwiper = new Swiper(".truck-single__img .big", {
             spaceBetween: 10,
+            autoHeight: true,
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",

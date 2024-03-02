@@ -116,6 +116,7 @@
   }
   &__tabs{
     margin-top: 33px;
+    width: 100%;
     &-header{
       display: flex;
       align-items: center;
@@ -145,6 +146,8 @@
     }
     &-content{
       margin-top: 30px;
+      max-height: 300px;
+      overflow-y: scroll;
     }
   }
 }

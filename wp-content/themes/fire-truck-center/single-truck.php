@@ -55,6 +55,8 @@ get_header();
                             if( $terms ){
                                 $term = array_shift( $terms );
                                 echo $term->name;
+                            } else {
+                                echo "N/A";
                             }
                             ?>
                         </div>
@@ -69,6 +71,8 @@ get_header();
                             if( $terms ){
                                 $term = array_shift( $terms );
                                 echo $term->name;
+                            } else {
+                                echo "N/A";
                             }
                             ?>
                         </div>
@@ -90,6 +94,8 @@ get_header();
                             $terms = get_the_terms( $post_id, 'mileage' );
                             if( $terms ){
                                 $term = array_shift( $terms );
+                            } else {
+                                echo "N/A";
                             }
                             ?>
                             <?php echo number_format($term->name, 0, ',', ','); ; ?>
@@ -105,6 +111,8 @@ get_header();
                             if( $terms ){
                                 $term = array_shift( $terms );
                                 echo $term->name;
+                            } else {
+                                echo "N/A";
                             }
                             ?>
                         </div>
