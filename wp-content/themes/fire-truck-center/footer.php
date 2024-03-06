@@ -34,7 +34,7 @@
                         Apparatus Type
                     </div>
                     <ul class="footer__nav-list">
-                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="https://firetruck.center/search-all-for-sale/?_sft_equipment_type=engine-pumpers">Engines & Pumpers</a></li>
+                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="https://firetruck.center/search-all-for-sale?_sft_equipment_type=pumper">Engines & Pumpers</a></li>
                         <li class="footer__nav-item"><a class="footer__nav-lnk" href="https://firetruck.center/search-all-for-sale/?_sft_equipment_type=wildland-brush-trucks">Wildland & Brush</a></li>
                         <li class="footer__nav-item"><a class="footer__nav-lnk" href="https://firetruck.center/search-all-for-sale/?_sft_equipment_type=tanks">Tanks</a></li>
                         <li class="footer__nav-item"><a class="footer__nav-lnk" href="https://firetruck.center/search-all-for-sale/?_sft_equipment_type=aerials">Aerials</a></li>
