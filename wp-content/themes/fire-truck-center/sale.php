@@ -65,7 +65,8 @@ get_header();
                                             <?php echo $sku; ?>
                                         </div>
                                         <div class="sale__item-price">
-                                            $<?php echo number_format($price, 2, '.', ','); ; ?>
+<!--                                            $--><?php //echo number_format($price, 2, '.', ','); ; ?>
+                                            More
                                         </div>
                                         <div class="sale__item-lnk">
                                             <svg width="61" height="41" viewBox="0 0 61 41" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -90,7 +91,8 @@ get_header();
                                             <?php echo $sku; ?>
                                         </div>
                                         <div class="sale__item-price">
-                                            $<?php echo number_format($price, 2, '.', ','); ; ?>
+<!--                                            $--><?php //echo number_format($price, 2, '.', ','); ; ?>
+                                            More
                                         </div>
                                         <div class="sale__item-lnk">
                                             <svg width="61" height="41" viewBox="0 0 61 41" fill="none" xmlns="http://www.w3.org/2000/svg">

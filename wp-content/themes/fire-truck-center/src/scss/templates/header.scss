@@ -51,6 +51,78 @@
       justify-content: center;
       li{
         margin-right: 3.2rem;
+        &.disabled{
+          cursor: pointer;
+          @media all and (max-width: 1280px){
+            margin-top: 20px;
+            margin-bottom: 20px;
+          }
+          > a{
+            pointer-events: none;
+            padding: 7px 20px;
+            background-color: #C92D36;
+            display: flex;
+            align-items: center;
+            @media all and (max-width: 1280px){
+              background-color: transparent;
+              text-align: center;
+              justify-content: center;
+            }
+            &:after{
+              content: "";
+              display: block;
+              width: 6px;
+              height: 6px;
+              border-right: 1px solid #FFFFFF;
+              border-bottom: 1px solid #FFFFFF;
+              transform: rotate(45deg);
+              margin-left: 10px;
+              @media all and (max-width: 1280px){
+                display: none;
+              }
+            }
+          }
+        }
+        &.menu-item-has-children{
+          position: relative;
+          @media all and (max-width: 1280px){
+            margin-top: 20px;
+            margin-bottom: 20px;
+          }
+          &:hover{
+            .sub-menu{
+              display: block;
+            }
+          }
+          .sub-menu{
+            display: none;
+            padding: 20px;
+            background-color: #1D1D1D;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            @media all and (max-width: 1280px){
+              display: block;
+              position: static;
+              padding: 0;
+            }
+            a{
+              white-space: nowrap;
+              padding: 5px 0;
+              @media all and (max-width: 1280px){
+                font-size: 18px;
+              }
+            }
+            li{
+              padding: 0;
+              margin-right: 0;
+              text-align: left;
+              @media all and (max-width: 1280px){
+                text-align: center;
+              }
+            }
+          }
+        }
         &.current_page_item{
           a{
             border-bottom: 1px solid #C92D36;

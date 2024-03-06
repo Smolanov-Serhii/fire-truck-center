@@ -18,8 +18,8 @@ get_header();
                 <h2 class="banner__subtitle">
                     <?php echo the_field('banner_subtitle', $post_id) ?>
                 </h2>
-                <a href="#send-form" class="banner__button button-skew">
-                    LIST WITH US
+                <a href="https://firetruck.center/search-all-for-sale/" class="banner__button button-skew">
+                    View Trucks for Sale
                 </a>
             </div>
         </section>

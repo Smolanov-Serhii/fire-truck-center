@@ -41,9 +41,9 @@ get_header();
                 <div class="truck-single__sku">
                     <?php echo the_field('sku', $post_id) ?>
                 </div>
-                <div class="truck-single__price">
-                    $<?php echo number_format(get_field('_price', $post_id), 2, '.', ','); ; ?>
-                </div>
+<!--                <div class="truck-single__price">-->
+<!--                    $--><?php //echo number_format(get_field('_price', $post_id), 2, '.', ','); ; ?>
+<!--                </div>-->
                 <div class="truck-single__meta">
                     <div class="truck-single__row">
                         <div class="name">
@@ -122,13 +122,13 @@ get_header();
             <div class="truck-single__tabs tabs-elements">
                 <div class="truck-single__tabs-header">
                     <div class="tabs-nav-item">Description</div>
-                    <div class="tabs-nav-item">General</div>
-                    <div class="tabs-nav-item">Pump</div>
+<!--                    <div class="tabs-nav-item">General</div>-->
+<!--                    <div class="tabs-nav-item">Pump</div>-->
                 </div>
                 <div class="truck-single__tabs-content">
                     <div class="tabs-content-item"><?php the_field('description', $post_id) ?></div>
-                    <div class="tabs-content-item" style="display: none;"><?php the_field('general', $post_id) ?></div>
-                    <div class="tabs-content-item" style="display: none;"><?php the_field('pump', $post_id) ?></div>
+<!--                    <div class="tabs-content-item" style="display: none;">--><?php //the_field('general', $post_id) ?><!--</div>-->
+<!--                    <div class="tabs-content-item" style="display: none;">--><?php //the_field('pump', $post_id) ?><!--</div>-->
                 </div>
             </div>
         </div>

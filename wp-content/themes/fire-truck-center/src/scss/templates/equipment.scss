@@ -27,7 +27,7 @@
     }
   }
   &__item{
-    width: calc(20% - 28px);
+    width: calc(16.66666% - 28px);
     margin-right: 28px;
     background-color: #1D1D1D;
     padding: 34px 10px 22px 10px ;
@@ -57,11 +57,11 @@
       margin-bottom: 10px;
     }
     &:hover{
-      background-color: #C92D36;
+      //background-color: #C92D36;
     }
     &-title{
       margin-top: 33px;
-      font-size: 2rem;
+      font-size: 1.6rem;
       font-weight: 500;
       color: #FFFFFF;
       text-align: center;
