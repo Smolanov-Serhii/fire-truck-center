@@ -51,7 +51,7 @@ get_header();
                         </div>
                         <div class="value">
                             <?php
-                            $terms = get_the_terms( $post_id, 'truck_types' );
+                            $terms = get_the_terms( $post_id, 'equipment_type' );
                             if( $terms ){
                                 $term = array_shift( $terms );
                                 echo $term->name;
@@ -126,7 +126,7 @@ get_header();
 <!--                    <div class="tabs-nav-item">Pump</div>-->
                 </div>
                 <div class="truck-single__tabs-content">
-                    <div class="tabs-content-item"><?php the_field('description', $post_id) ?></div>
+<!--                    <div class="tabs-content-item">--><?php //the_field('description', $post_id) ?><!--</div>-->
 <!--                    <div class="tabs-content-item" style="display: none;">--><?php //the_field('general', $post_id) ?><!--</div>-->
 <!--                    <div class="tabs-content-item" style="display: none;">--><?php //the_field('pump', $post_id) ?><!--</div>-->
                 </div>
