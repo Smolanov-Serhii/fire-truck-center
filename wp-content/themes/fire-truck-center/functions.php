@@ -175,5 +175,13 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+add_action( 'wp_footer', 'wpm_redirect_cf7' );
+function wpm_redirect_cf7() { ?>
+    <script type="text/javascript">
+        document.addEventListener('wpcf7mailsent', function(event) {
+            location = 'https://firetruck.center/thank-you/';
+        }, false);
+    </script>
+<?php }
 
 

@@ -18,7 +18,7 @@ get_header();
                 <h2 class="banner__subtitle">
                     <?php echo the_field('banner_subtitle', $post_id) ?>
                 </h2>
-                <a href="https://firetruck.center/search-all-for-sale/" class="banner__button button-skew">
+                <a href="https://firetruck.center/search-fire-truck-for-sale/" class="banner__button button-skew">
                     View Trucks for Sale
                 </a>
             </div>

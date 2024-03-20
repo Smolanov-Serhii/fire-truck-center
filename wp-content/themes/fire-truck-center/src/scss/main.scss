@@ -225,6 +225,11 @@ main{
 .wpcf7-not-valid{
   border: 1px solid rgba(201, 45, 54, 1)!important;
 }
+.page-template-thanks-php{
+  .banner-image{
+    min-height: 100vh;
+  }
+}
 
 @import "templates/preloader";
 @import "templates/header";
