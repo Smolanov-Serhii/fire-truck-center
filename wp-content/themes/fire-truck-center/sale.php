@@ -80,7 +80,7 @@ get_header();
                                     <?php
                                 } else {
                                     ?>
-                                    <div data-href="<?php the_permalink();?>" class="sale__item sale__item-desctop">
+                                    <a href="<?php the_permalink();?>" class="sale__item sale__item-desctop">
                                         <div class="sale__item-image">
                                             <?php the_post_thumbnail( 'full' );?>
                                         </div>
@@ -102,7 +102,7 @@ get_header();
                                                 <path d="M26.9998 23L26.9998 17L34.9998 17L34.9998 12.16L42.8398 20L34.9998 27.84L34.9998 23L26.9998 23Z" fill="white"/>
                                             </svg>
                                         </div>
-                                    </div>
+                                    </a>
                                     <?php
                                 }
                                 ?>
