@@ -80,7 +80,7 @@ get_header();
                                     <?php
                                 } else {
                                     ?>
-                                    <a href="<?php the_permalink();?>" class="sale__item sale__item-desctop">
+                                    <a href="<?php the_permalink();?>" class="sale__item ">
                                         <div class="sale__item-image">
                                             <?php the_post_thumbnail( 'full' );?>
                                         </div>
