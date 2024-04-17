@@ -118,6 +118,11 @@ get_header();
                         </div>
                     </div>
                 </div>
+                <div class="truck-single__button">
+                    <a href="https://firetruck.center/contact-us/" class="button-skew">
+                        <span>Get a price</span>
+                    </a>
+                </div>
             </div>
             <div class="truck-single__tabs tabs-elements">
                 <div class="truck-single__tabs-header">
@@ -126,7 +131,7 @@ get_header();
 <!--                    <div class="tabs-nav-item">Pump</div>-->
                 </div>
                 <div class="truck-single__tabs-content">
-<!--                    <div class="tabs-content-item">--><?php //the_field('description', $post_id) ?><!--</div>-->
+                    <div class="tabs-content-item"><?php the_field('description', $post_id) ?></div>
 <!--                    <div class="tabs-content-item" style="display: none;">--><?php //the_field('general', $post_id) ?><!--</div>-->
 <!--                    <div class="tabs-content-item" style="display: none;">--><?php //the_field('pump', $post_id) ?><!--</div>-->
                 </div>
