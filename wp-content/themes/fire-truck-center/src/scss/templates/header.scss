@@ -51,7 +51,7 @@
       justify-content: center;
       li{
         margin-right: 3.2rem;
-        &.disabled{
+        &.disabled, &.red{
           cursor: pointer;
           @media all and (max-width: 1280px){
             margin-top: 20px;
@@ -81,6 +81,11 @@
                 display: none;
               }
             }
+          }
+        }
+        &.red{
+          > a{
+            pointer-events: auto;
           }
         }
         &.menu-item-has-children{
