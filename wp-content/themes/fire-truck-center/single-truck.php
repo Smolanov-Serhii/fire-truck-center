@@ -119,9 +119,10 @@ get_header();
                     </div>
                 </div>
                 <div class="truck-single__button">
-                    <a href="https://firetruck.center/contact-us/" class="button-skew">
-                        <span>Get a price</span>
-                    </a>
+                    <?php echo do_shortcode( '[contact-form-7 id="3ae4a73" title="Get a price"]' ); ?>
+<!--                    <a href="https://firetruck.center/contact-us/" class="button-skew">-->
+<!--                        <span>Get a price</span>-->
+<!--                    </a>-->
                 </div>
             </div>
             <div class="truck-single__tabs tabs-elements">
