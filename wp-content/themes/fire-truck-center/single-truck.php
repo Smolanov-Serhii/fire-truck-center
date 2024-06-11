@@ -10,9 +10,10 @@ get_header();
                         <?php if( have_rows('image_slider') ): ?>
                             <?php while( have_rows('image_slider') ): the_row();
                                 $image = get_sub_field('slide_image');
+                                $image_url = $image['sizes']['large'];
                                 ?>
                                 <div class="truck-single__slide swiper-slide">
-                                    <img src="<?php echo $image;?>" alt="<?php the_title();?>">
+                                    <img src="<?php echo $image_url;?>" alt="<?php the_title();?>">
                                 </div>
                             <?php endwhile; ?>
                         <?php endif; ?>
@@ -25,9 +26,10 @@ get_header();
                         <?php if( have_rows('image_slider') ): ?>
                             <?php while( have_rows('image_slider') ): the_row();
                                 $image = get_sub_field('slide_image');
+                                $image_url = $image['sizes']['medium'];
                                 ?>
                                 <div class="truck-single__slide swiper-slide">
-                                    <img src="<?php echo $image;?>" alt="<?php the_title();?>">
+                                    <img src="<?php echo $image_url;?>" alt="<?php the_title();?>">
                                 </div>
                             <?php endwhile; ?>
                         <?php endif; ?>

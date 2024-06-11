@@ -56,7 +56,7 @@ get_header();
                                     ?>
                                     <a href="<?php the_permalink();?>" class="sale__item" target="_blank" title="<?php the_title(); ?>">
                                         <div class="sale__item-image">
-                                            <?php the_post_thumbnail( 'full' );?>
+                                            <?php the_post_thumbnail( 'large' );?>
                                         </div>
                                         <h3 class="sale__item-title">
                                             <?php the_title(); ?>
@@ -82,7 +82,7 @@ get_header();
                                     ?>
                                     <a href="<?php the_permalink();?>" class="sale__item ">
                                         <div class="sale__item-image">
-                                            <?php the_post_thumbnail( 'full' );?>
+                                            <?php the_post_thumbnail( 'large' );?>
                                         </div>
                                         <h3 class="sale__item-title">
                                             <?php the_title(); ?>

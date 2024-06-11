@@ -27,7 +27,7 @@
                     ?>
                     <div class="featured__item swiper-slide">
                         <a href="<?php the_permalink();?>" class="featured__item-img" title="<?php the_title();?>">
-                            <?php the_post_thumbnail( 'full' );?>
+                            <?php the_post_thumbnail( 'large' );?>
                         </a>
                         <a href="<?php the_permalink();?>" class="featured__item-desc" title="<?php the_title();?>">
                             <h3 class="featured__item-title">
