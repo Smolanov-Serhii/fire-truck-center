@@ -39,8 +39,14 @@
                         </a>
                         <div class="featured__item-bottom">
                             <div class="price">
-<!--                                $--><?php //echo number_format($price, 2, '.', ','); ; ?>
-                                More Info
+                                <?php
+                                    if ($price){
+                                        echo '$' . number_format($price, 0, '.', ',');
+                                    } else {
+                                        echo 'More Info';
+                                    }
+                                ?>
+                                <?php ?>
                             </div>
                             <a href="<?php the_permalink();?>" class="more" title="<?php the_title();?>">
                                 <img src="<?php echo get_template_directory_uri(); ?>/img/header/more.svg" alt="<?php the_title();?>">

@@ -23,6 +23,11 @@ get_header();
                 </a>
             </div>
         </section>
+        <section class="vstavka">
+            <div class="vstavka__container main-container">
+                <h2 class="vstavka__title banner__subtitle"><?php echo the_field('slogan-title', $post_id) ?></h2>
+            </div>
+        </section>
         <?php get_template_part( 'template-parts/content', 'featured' ); ?>
         <?php get_template_part( 'template-parts/content', 'text' ); ?>
         <?php get_template_part( 'template-parts/content', 'equipment' ); ?>
