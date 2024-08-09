@@ -40,11 +40,12 @@
                         <div class="featured__item-bottom">
                             <div class="price">
                                 <?php
-                                    if ($price){
-                                        echo '$' . number_format($price, 0, '.', ',');
-                                    } else {
-                                        echo 'More Info';
-                                    }
+//                                    if ($price){
+//                                        echo '$' . number_format($price, 0, '.', ',');
+//                                    } else {
+//                                        echo 'More Info';
+//                                    }
+                                echo 'More Info';
                                 ?>
                                 <?php ?>
                             </div>

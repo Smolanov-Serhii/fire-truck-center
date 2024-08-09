@@ -43,17 +43,17 @@ get_header();
                 <div class="truck-single__sku">
                     <?php echo the_field('sku', $post_id) ?>
                 </div>
-                <div class="truck-single__price">
-                    <?php
-                    if (get_field('_price', $post_id)){
-                        echo '$' . number_format(get_field('_price', $post_id), 2, '.', ',');
-                    } else {
-                        echo 'N/A';
-                    }
-                    ?>
-                    <?php ?>
-
-                </div>
+<!--                <div class="truck-single__price">-->
+<!--                    --><?php
+//                    if (get_field('_price', $post_id)){
+//                        echo '$' . number_format(get_field('_price', $post_id), 2, '.', ',');
+//                    } else {
+//                        echo 'N/A';
+//                    }
+//                    ?>
+<!--                    --><?php //?>
+<!---->
+<!--                </div>-->
                 <div class="truck-single__meta">
                     <div class="truck-single__row">
                         <div class="name">

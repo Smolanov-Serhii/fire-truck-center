@@ -92,11 +92,12 @@ get_header();
                                         </div>
                                         <div class="sale__item-price">
                                             <?php
-                                            if ($price){
-                                                echo '$' . number_format($price, 0, '.', ',');
-                                            } else {
-                                                echo 'More';
-                                            }
+//                                            if ($price){
+//                                                echo '$' . number_format($price, 0, '.', ',');
+//                                            } else {
+//                                                echo 'More';
+//                                            }
+                                            echo 'More';
                                             ?>
                                         </div>
                                         <div class="sale__item-lnk">
