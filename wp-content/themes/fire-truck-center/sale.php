@@ -119,54 +119,54 @@ get_header();
                 </div>
             </div>
         </div>
-        <script>(function ( $ ) {
-                "use strict";
-                $(document).on("sf:ajaxfinish", ".searchandfilter", function(){
-                    $( ".sale__item" ).on( "click", function() {
-                        let ItemLnk = $(this).data('href');
-                        $.ajax({
-                            type: 'GET', //or POST i don't know which one
-                            url: ItemLnk, //or should this be the url: ?
-                            success: function(data){
-                                $html = $(data).find('.truck-single');
-                                $html.appendTo(".popup-truck__wrapper");
-                                var SmallSwiper = new Swiper(".truck-single__img .small", {
-                                    spaceBetween: 17,
-                                    slidesPerView: 5,
-                                    freeMode: true,
-                                    watchSlidesProgress: true,
-                                });
-                                var BigSwiper = new Swiper(".truck-single__img .big", {
-                                    spaceBetween: 10,
-                                    navigation: {
-                                        nextEl: ".swiper-button-next",
-                                        prevEl: ".swiper-button-prev",
-                                    },
-                                    thumbs: {
-                                        swiper: SmallSwiper,
-                                    },
-                                });
-                                $('.popup-truck').fadeIn(300);
-                                $(".tabs-elements .tabs-nav-item").click(function() {
-                                    $(".tabs-elements .tabs-nav-item").removeClass("active").eq($(this).index()).addClass("active");
-                                    $(".tabs-elements .tabs-content-item").hide().eq($(this).index()) .css("display", "block")
-                                        .hide()
-                                        .fadeIn();
-                                }).eq(0).addClass("active");
-                                $(".tabs-elements .tabs-content-item").eq(0).addClass("active");
-                            }
-                        });
-                        return false;
-                    } );
-                    $( ".popup-truck__close" ).on( "click", function() {
-                        $('.popup-truck').fadeOut(300);
-                        setTimeout(function (){
-                            $('.popup-truck__wrapper').empty();
-                        }, 300);
-                    } );
-                });
-
-            }(jQuery));</script>
+<!--        <script>(function ( $ ) {-->
+<!--                "use strict";-->
+<!--                $(document).on("sf:ajaxfinish", ".searchandfilter", function(){-->
+<!--                    $( ".sale__item" ).on( "click", function() {-->
+<!--                        let ItemLnk = $(this).data('href');-->
+<!--                        $.ajax({-->
+<!--                            type: 'GET', //or POST i don't know which one-->
+<!--                            url: ItemLnk, //or should this be the url: ?-->
+<!--                            success: function(data){-->
+<!--                                $html = $(data).find('.truck-single');-->
+<!--                                $html.appendTo(".popup-truck__wrapper");-->
+<!--                                var SmallSwiper = new Swiper(".truck-single__img .small", {-->
+<!--                                    spaceBetween: 17,-->
+<!--                                    slidesPerView: 5,-->
+<!--                                    freeMode: true,-->
+<!--                                    watchSlidesProgress: true,-->
+<!--                                });-->
+<!--                                var BigSwiper = new Swiper(".truck-single__img .big", {-->
+<!--                                    spaceBetween: 10,-->
+<!--                                    navigation: {-->
+<!--                                        nextEl: ".swiper-button-next",-->
+<!--                                        prevEl: ".swiper-button-prev",-->
+<!--                                    },-->
+<!--                                    thumbs: {-->
+<!--                                        swiper: SmallSwiper,-->
+<!--                                    },-->
+<!--                                });-->
+<!--                                $('.popup-truck').fadeIn(300);-->
+<!--                                $(".tabs-elements .tabs-nav-item").click(function() {-->
+<!--                                    $(".tabs-elements .tabs-nav-item").removeClass("active").eq($(this).index()).addClass("active");-->
+<!--                                    $(".tabs-elements .tabs-content-item").hide().eq($(this).index()) .css("display", "block")-->
+<!--                                        .hide()-->
+<!--                                        .fadeIn();-->
+<!--                                }).eq(0).addClass("active");-->
+<!--                                $(".tabs-elements .tabs-content-item").eq(0).addClass("active");-->
+<!--                            }-->
+<!--                        });-->
+<!--                        return false;-->
+<!--                    } );-->
+<!--                    $( ".popup-truck__close" ).on( "click", function() {-->
+<!--                        $('.popup-truck').fadeOut(300);-->
+<!--                        setTimeout(function (){-->
+<!--                            $('.popup-truck__wrapper').empty();-->
+<!--                        }, 300);-->
+<!--                    } );-->
+<!--                });-->
+<!---->
+<!--            }(jQuery));</script>-->
     </main>
 <?php
 
