@@ -5,6 +5,32 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
+  &__callback{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: none;
+    z-index: 50;
+    @media all and (max-width: 1024px){
+      display: block;
+    }
+    &-btn{
+      width: 100%;
+      background-color: #C92D36;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      text-decoration: none;
+      color: #FFFFFF;
+      padding: 10px;
+      img{
+        margin-right: 20px;
+      }
+    }
+  }
   &__brand{
     width: 29.9rem;
     @media all and (max-width: 1600px){

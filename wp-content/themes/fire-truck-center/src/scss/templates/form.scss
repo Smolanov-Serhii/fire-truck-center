@@ -1,3 +1,33 @@
+.wpcf7-form{
+  > p{
+    color: #FFFFFF;
+    margin-top: 2em;
+  }
+}
+.page-template-sell{
+  .wpcf7-form{
+    > p{
+      color: rgb(33, 53, 64);
+    }
+  }
+}
+.page-template-contacts{
+  .wpcf7-form{
+    > p{
+      color: rgb(33, 53, 64);
+      text-align: left;
+    }
+  }
+}
+.single-truck{
+  .wpcf7-form{
+    > p{
+      color: rgb(33, 53, 64);
+      text-align: left;
+      margin-top: 0;
+    }
+  }
+}
 .form{
   position: relative;
   margin: 80px auto 0 auto;

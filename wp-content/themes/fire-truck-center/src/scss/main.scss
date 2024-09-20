@@ -28,6 +28,9 @@ body{
   height: auto;
   min-height: 100vh;
   position: relative;
+  @media all and (max-width: 1024px){
+    padding-bottom: 60px;
+  }
   @media all and (max-width: 768px){
     height: auto;
   }

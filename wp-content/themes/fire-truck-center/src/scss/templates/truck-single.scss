@@ -28,6 +28,14 @@
     }
     .swiper-button-next, .swiper-button-prev{
       color: rgba(29, 29, 29, 1);
+      background-color: #FFFFFF;
+      padding: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:after, &:before{
+        display: none;
+      }
     }
     .small{
       .swiper-slide{
@@ -148,6 +156,18 @@
       margin-top: 30px;
       //max-height: 300px;
       //overflow-y: scroll;
+      iframe{
+        float: left;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        max-width: 50%;
+        @media all and (max-width: 768px){
+          float: none;
+          margin-right: 0;
+          width: 100%;
+          max-width: none;
+        }
+      }
     }
   }
   &__button{
