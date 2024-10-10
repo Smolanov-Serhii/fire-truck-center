@@ -1,3 +1,6 @@
+<?php
+$post_id = get_the_ID();
+?>
 <section class="text">
     <div class="text__container main-container">
         <h2 class="text__title section-title">

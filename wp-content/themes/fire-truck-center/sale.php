@@ -37,12 +37,13 @@ get_header();
                     <div class="sale__result" id="result">
                         <?php
                         $args = array(
-                            'post_type' => 'treners',
+                            'post_type' => 'truck',
                             'relation' => 'OR',
+                            'post_status'      => 'publish',
                             'showposts' => "-1", //сколько показать статей
                             'search_filter_id' => 59, //сколько показать статей
                             'orderby' => "menu_order", //сортировка по дате
-                            'caller_get_posts' => 1);
+                            'ignore_sticky_posts' => 1);
                         $my_query = new wp_query($args);
                         if ($my_query->have_posts()) {
                             while ($my_query->have_posts()) {

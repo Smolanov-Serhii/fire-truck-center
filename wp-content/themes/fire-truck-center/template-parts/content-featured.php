@@ -17,7 +17,7 @@
                     'meta_key'         => '',
                     'meta_value'       => '',
                     'post_type'        => 'truck',
-                    'post_status'      => 'draft, publish, future, pending, private',
+                    'post_status'      => 'publish',
                     'suppress_filters' => true,
                 ], OBJECT );
                 foreach( $result as $post ){
