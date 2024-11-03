@@ -42,7 +42,7 @@ const scriptFiles = [
    // './src/js/swiper-bundle.js',
    // './src/js/jquery.onepage-scroll.js',
    // './src/client/js/jquery.mCustomScrollbar.js',
-   // './src/js/fresco.min.js',
+   './src/js/fresco.min.js',
    './src/js/scripts.js'
 
 ]
