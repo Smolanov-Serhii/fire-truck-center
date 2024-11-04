@@ -28,41 +28,56 @@ get_header();
                 </nav>
             </div>
         </section>
-        <div class="post__list main-container">
+        <ul class="post__list main-container">
             <?php if ( have_posts() ) : ?>
                 <?php
                 while ( have_posts() ) :
                     the_post();
-
-                    /*
-                    * Include the Post-Type-specific template for the content.
-                    * If you want to override this in a child theme, then include a file
-                    * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-                    */
-                    get_template_part( 'template-parts/content', get_post_type() );
+                        ?>
+                            <li class="post__list-item">
+                                <a href="<?php the_permalink();?>" class="post__list-img" title="<?php the_title();?>">
+                                    <?php the_post_thumbnail('medium');?>
+                                </a>
+                                <a href="<?php the_permalink();?>" class="post__list-lnk" title="<?php the_title();?>">
+                                    <h2 class="post__list-title">
+                                        <?php the_title();?>
+                                    </h2>
+                                </a>
+                                <span class="post__list-except">
+                                    <?php the_excerpt();?>
+                                </span>
+                                <a href="<?php the_permalink();?>" class="post__list-more" title="<?php the_title();?>">
+                                    <?php echo 'Read more'; ?>
+                                    <img src="<?php echo get_template_directory_uri(); ?>/img/header/more.svg" alt="<?php the_title();?>">
+                                </a>
+                            </li>
+                        <?php
                 endwhile;
+                echo "<div class='pagination'>";
+                global $wp_query;
 
+                $big = 999999999; // уникальное число для замены
 
-            else :
+                $args = array(
+                    'base'               => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+                    'format'             => '?paged=%#%',
+                    'current'            => max(1, get_query_var('paged')),
+                    'total'              => $wp_query->max_num_pages,
+                    'prev_text'          => __('&laquo; Previous'),
+                    'next_text'          => __('Next &raquo;'),
+                    'show_all'           => false,
+                    'end_size'           => 2,
+                    'mid_size'           => 3,
+                    'before_page_number' => '<span class="page-num">',
+                    'after_page_number'  => '</span>',
+                );
 
-                echo "Not found the post";
-
+                echo paginate_links($args);
+                echo "</div>";
             endif;
-            $args = array(
-                'show_all'     => false, // показаны все страницы участвующие в пагинации
-                'end_size'     => 1,     // количество страниц на концах
-                'mid_size'     => 1,     // количество страниц вокруг текущей
-                'prev_next'    => true,  // выводить ли боковые ссылки "предыдущая/следующая страница".
-                'prev_text'    => __('« Previous'),
-                'next_text'    => __('Next »'),
-                'add_args'     => false, // Массив аргументов (переменных запроса), которые нужно добавить к ссылкам.
-                'add_fragment' => '',     // Текст который добавиться ко всем ссылкам.
-                'screen_reader_text' => __( 'Posts navigation' ),
-                'class'        => 'pagination', // CSS класс, добавлено в 5.5.0.
-            );
-            the_posts_pagination( $args );
+
             ?>
-        </div>
+        </ul>
 	</main>
 
 <?php

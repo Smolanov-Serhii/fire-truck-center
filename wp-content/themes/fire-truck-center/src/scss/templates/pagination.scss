@@ -1,0 +1,37 @@
+.pagination{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .page-numbers{
+    margin: 0 11px;
+    text-decoration: none;
+    &.current{
+      .page-num{
+        color: #C92D36;
+      }
+    }
+    &.next{
+      color: transparent;
+      width: 40px;
+      height: 40px;
+      background-image: url("../../img/pagination/next.svg");
+      background-position: center;
+      background-size: contain;
+    }
+    &.prev{
+      color: transparent;
+      width: 40px;
+      height: 40px;
+      background-image: url("../../img/pagination/prev.svg");
+      background-position: center;
+      background-size: contain;
+    }
+  }
+  .page-num{
+    color: #1D1D1D;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 125.9%;
+  }
+}

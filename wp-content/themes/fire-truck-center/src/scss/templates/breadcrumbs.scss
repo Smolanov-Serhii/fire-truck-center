@@ -45,8 +45,8 @@
       }
     }
   }
-  a{
-    font-size: 14px;
+  a, span{
+    font-size: 18px;
     line-height: 21px;
     color: #c92d36;
     text-decoration: none;
@@ -58,7 +58,6 @@
     }
   }
   .current-page{
-    font-size: 14px;
     line-height: 21px;
     color: #FFFFFF;
     @media all and (max-width: 1024px){
