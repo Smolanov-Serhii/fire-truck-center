@@ -1,50 +1,52 @@
 .blog-template-default{
-  h2{
-    margin-bottom: 0.5em;
-  }
-  .banner-image{
-    .small-container{
-      max-width: 1195px;
-      padding-left: 20px;
-      padding-right: 20px;
+  .main{
+    h2{
+      margin-bottom: 0.5em;
     }
-  }
-  a:not(.form__number){
-    color: #C92D36;
-    text-decoration: underline;
-  }
-  ol{
-    padding-left: 2em;
+    .banner-image{
+      .small-container{
+        max-width: 1195px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+    a:not(.form__number){
+      color: #C92D36;
+      text-decoration: underline;
+    }
+    ol{
+      padding-left: 2em;
+      li{
+        list-style: decimal;
+      }
+    }
+    ul{
+      padding-left: 2em;
+      li{
+        list-style: disc;
+      }
+    }
     li{
-      list-style: decimal;
-    }
-  }
-  ul{
-    padding-left: 2em;
-    li{
-      list-style: disc;
-    }
-  }
-  li{
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 138.52%;
-    color: #213540;
-    margin-bottom: 18px;
-    @media all and (max-width: 1600px){
-      font-size: 16px;
-    }
-    @media all and (max-width: 1400px){
-      font-size: 15px;
-    }
-    @media all and (max-width: 1024px){
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 138.52%;
+      color: #213540;
+      margin-bottom: 18px;
+      @media all and (max-width: 1600px){
+        font-size: 16px;
+      }
+      @media all and (max-width: 1400px){
+        font-size: 15px;
+      }
+      @media all and (max-width: 1024px){
 
-    }
-    @media all and (max-width: 768px){
-      font-size: 14px;
-    }
-    @media all and (max-width: 500px){
-      font-size: 14px;
+      }
+      @media all and (max-width: 768px){
+        font-size: 14px;
+      }
+      @media all and (max-width: 500px){
+        font-size: 14px;
+      }
     }
   }
 }
