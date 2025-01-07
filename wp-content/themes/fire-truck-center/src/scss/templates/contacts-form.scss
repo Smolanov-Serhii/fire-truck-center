@@ -76,6 +76,13 @@
     border-radius: 5px;
     border: 1px solid rgba(29, 29, 29, 1);
     overflow: hidden;
+    &.image{
+      border: none;
+      img{
+        height: auto;
+      }
+
+    }
     img{
       width: 100%;
       height: 100%;

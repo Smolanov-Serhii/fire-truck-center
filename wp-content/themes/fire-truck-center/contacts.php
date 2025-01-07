@@ -56,8 +56,38 @@ get_header();
                     <p>Or fill out the form below and we'll get in touch with you in the next 24 hours.</p>
                     <?php echo do_shortcode('[contact-form-7 id="1d78ed8" title="Contacts form"]')?>
                 </div>
-                <div class="contacts-form__map">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/banner/map.png" alt="">
+                <div class="contacts-form__map <?php echo get_field('select_image_type', $post_id)?>">
+                    <?php
+                        if (get_field('select_image_type', $post_id) === "map"){
+                            ?>
+                                <img src="<?php echo get_template_directory_uri(); ?>/img/banner/map.png" alt="">
+                            <?php
+                        } elseif (get_field('select_image_type', $post_id) === "image"){
+                            ?>
+                            <img src="<?php echo get_field('custom_image', $post_id); ?>" alt="<?php echo get_field('atl_for_custom_image', $post_id)?>">
+                            <?php
+                        } else {
+                            ?>
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <?php
+                                        if( have_rows('custom_slider', $post_id) ):
+                                            while( have_rows('custom_slider', $post_id) ) : the_row();
+                                                $image = get_sub_field('slide_image');
+                                                $alt= get_sub_field('alt_fom_image');
+                                                ?>
+                                                <div class="swiper-slide">
+                                                    <img src="<?php echo $image;?>" alt="<?php echo $alt;?>">
+                                                </div>
+                                            <?php
+                                            endwhile;
+                                        endif;
+                                        ?>
+                                    </div>
+                                </div>
+                            <?php
+                        }
+                    ?>
                 </div>
             </div>
         </div>

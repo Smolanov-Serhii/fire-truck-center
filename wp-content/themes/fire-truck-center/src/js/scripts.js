@@ -199,5 +199,23 @@ $(document).ready(function () {
     //     });
     // }
 
+    if ($('.phone').length) {
+        // +1 (215) 559-1991
+        // $(".phone").on("input", function() {
+        //     var value = $(this).val();
+        //     var pos = value.indexOf('+1');
+        //     this.value = this.value.replace(/[^0-9+]/g, '');
+        //     if(pos === 0) return;
+        //     else if(pos < 0) $(this).val('+' + value);
+        //     else $(this).val(value.substr(pos));
+        // });
+        var element = document.getElementsByClassName("phone")[0];
+        const maskOptions = {
+            mask: '+{1} (000) 000-0000'
+        };
+        const mask = IMask(element, maskOptions);
+    }
+
+
 });
 
