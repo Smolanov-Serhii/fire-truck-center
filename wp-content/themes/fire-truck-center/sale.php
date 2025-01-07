@@ -42,12 +42,8 @@ get_header();
                             'post_status'      => 'publish',
                             'showposts' => "-1", //сколько показать статей
                             'search_filter_id' => 59, //сколько показать статей
-                            'meta_query' => [
-                                'key' => '_year',
-                            ],
-                            'orderby' => [ 'year' => 'ASC' ],
-                            'ignore_sticky_posts' => 1,
-                            );
+                            'orderby' => "menu_order", //сортировка по дате
+                            'ignore_sticky_posts' => 1);
                         $my_query = new wp_query($args);
                         if ($my_query->have_posts()) {
                             while ($my_query->have_posts()) {
