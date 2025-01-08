@@ -130,38 +130,38 @@ $(document).ready(function () {
         console.log("ajax complete");
         //so load your lightbox or JS scripts here again
     });
-//    function PopupTruck(){
-//        if ($(".sale__result").length){
-//            $( ".sale__item-desctop" ).on( "click", function() {
-//                let ItemLnk = $(this).data('href');
-//                $.ajax({
-//                    type: 'GET', //or POST i don't know which one
-//                    url: ItemLnk, //or should this be the url: ?
-//                    success: function(data){
-//                        $html = $(data).find('.truck-single');
-//                        $html.appendTo(".popup-truck__wrapper");
-//                        SwiperThumb();
-//                        TabInit();
-//                        $('.popup-truck').fadeIn(300);
-//                    }
-//                });
-//                return false;
-//            } );
-//            $( ".popup-truck__close" ).on( "click", function() {
-//                $('.popup-truck').fadeOut(300);
-//                setTimeout(function (){
-//                    $('.popup-truck__wrapper').empty();
-//                }, 300);
-//            } );
-//            $( ".sale__main-header .filter" ).on( "click", function() {
-//                $('.sale__sidebar').addClass('active');
-//            } );
-//            $( ".sale__sidebar-close" ).on( "click", function() {
-//                $('.sale__sidebar').removeClass('active');
-//            } );
-//        }
-//    }
-//    PopupTruck();
+   function PopupTruck(){
+       if ($(".sale__result").length){
+           // $( ".sale__item-desctop" ).on( "click", function() {
+           //     let ItemLnk = $(this).data('href');
+           //     $.ajax({
+           //         type: 'GET', //or POST i don't know which one
+           //         url: ItemLnk, //or should this be the url: ?
+           //         success: function(data){
+           //             $html = $(data).find('.truck-single');
+           //             $html.appendTo(".popup-truck__wrapper");
+           //             SwiperThumb();
+           //             TabInit();
+           //             $('.popup-truck').fadeIn(300);
+           //         }
+           //     });
+           //     return false;
+           // } );
+           $( ".popup-truck__close" ).on( "click", function() {
+               $('.popup-truck').fadeOut(300);
+               setTimeout(function (){
+                   $('.popup-truck__wrapper').empty();
+               }, 300);
+           } );
+           $( ".sale__main-header .filter" ).on( "click", function() {
+               $('.sale__sidebar').addClass('active');
+           } );
+           $( ".sale__sidebar-close" ).on( "click", function() {
+               $('.sale__sidebar').removeClass('active');
+           } );
+       }
+   }
+   PopupTruck();
 
     function SwiperThumb() {
         var SmallSwiper = new Swiper(".truck-single__img .small", {
