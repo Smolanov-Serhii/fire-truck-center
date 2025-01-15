@@ -120,14 +120,13 @@ get_header();
                         </div>
                         <div class="value">
                             <?php
-                            $terms = get_the_terms( $post_id, 'mileage' );
+                            $terms = get_field('mileage', $post_id);
                             if( $terms ){
-                                $term = array_shift( $terms );
+                                echo number_format($terms, 0, ',', ',');
                             } else {
                                 echo "N/A";
                             }
                             ?>
-                            <?php echo number_format($term->name, 0, ',', ','); ; ?>
                         </div>
                     </div>
                     <div class="truck-single__row">
