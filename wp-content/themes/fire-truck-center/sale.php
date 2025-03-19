@@ -88,7 +88,16 @@ get_header();
                                             <?php the_post_thumbnail( 'large' );?>
                                         </div>
                                         <h3 class="sale__item-title">
-                                            <?php the_title(); ?>
+                                            <?php
+                                            $field = get_field_object( 'status_sibgle' );
+                                            $value = $field['value'];
+                                            $label = $field['choices'][ $value ];
+                                            if (!$label == 'default'){
+                                                echo the_title() . ' - ' . $label;
+                                            } else {
+                                                the_title();
+                                            }
+                                            ?>
                                         </h3>
                                         <div class="sale__item-sku">
                                             <?php echo $sku; ?>
