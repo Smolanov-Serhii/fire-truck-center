@@ -185,3 +185,61 @@ function wpm_redirect_cf7() { ?>
 <?php }
 
 
+//admin filter
+add_action( 'restrict_manage_posts', 'wpse45436_admin_posts_filter_restrict_manage_posts' );
+/**
+ * First create the dropdown
+/** Create the filter dropdown */
+function wpse45436_admin_posts_filter_restrict_manage_posts(){
+    $type = 'truck'; // change to custom post name.
+    if (isset($_GET['truck'])) {
+        $type = $_GET['truck'];
+    }
+
+    //only add filter to post type you want
+    if ('truck' == $type){
+        //change this to the list of values you want to show
+        //in 'label' => 'value' format
+        $values = array(
+            'default' => 'default',
+            'pending' => 'pending',
+            'sold' => 'sold',
+        );
+        ?>
+        <select name="ADMIN_FILTER_FIELD_VALUE">
+            <option value=""><?php _e('Status ', 'wose45436'); ?></option>
+            <?php
+            $current_v = isset($_GET['ADMIN_FILTER_FIELD_VALUE'])? $_GET['ADMIN_FILTER_FIELD_VALUE']:'';
+            foreach ($values as $label => $value) {
+                printf
+                (
+                    '<option value="%s"%s>%s</option>',
+                    $value,
+                    $value == $current_v? ' selected="selected"':'',
+                    $label
+                );
+            }
+            ?>
+        </select>
+        <?php
+    }
+}
+
+
+add_filter( 'parse_query', 'wpse45436_posts_filter' );
+/**
+ * if submitted filter by post meta
+
+ * @return Void
+ */
+function wpse45436_posts_filter( $query ){
+    global $pagenow;
+    $type = 'truck'; // change to custom post name.
+    if (isset($_GET['truck'])) {
+        $type = $_GET['truck'];
+    }
+    if ( 'truck' == $type && is_admin() && $pagenow=='edit.php' && isset($_GET['ADMIN_FILTER_FIELD_VALUE']) && $_GET['ADMIN_FILTER_FIELD_VALUE'] != '') {
+        $query->query_vars['meta_key'] = 'status_sibgle'; // change to meta key created by acf.
+        $query->query_vars['meta_value'] = $_GET['ADMIN_FILTER_FIELD_VALUE'];
+    }
+}
