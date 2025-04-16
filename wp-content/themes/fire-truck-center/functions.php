@@ -243,3 +243,40 @@ function wpse45436_posts_filter( $query ){
         $query->query_vars['meta_value'] = $_GET['ADMIN_FILTER_FIELD_VALUE'];
     }
 }
+
+// Название вашего типа записи из функции register_post_type
+$post_type = 'truck';
+
+// Регистрируем свои колонки
+add_filter( "manage_{$post_type}_posts_columns", function ( $defaults ) {
+
+//    $defaults['custom-one'] = 'Custom One';
+    $defaults['custom-two'] = 'SKU';
+
+    return $defaults;
+} );
+
+// Вставляем значения для отображения в наших колонках
+add_action( "manage_{$post_type}_posts_custom_column", function ( $column_name, $post_id ) {
+
+//    if ( $column_name == 'custom-one' ) {
+//        // пример статических данных
+//        echo 'Some value here';
+//    }
+
+    if ( $column_name == 'custom-two' ) {
+        // Пример вывода из поля ACF
+        echo get_field( 'sku', $post_id );
+    }
+
+}, 10, 2 );
+
+// добавляем возможность сортировать колонку
+add_filter( 'manage_edit-' . 'truck' . '_sortable_columns', 'add_views_sortable_column' );
+function add_views_sortable_column( $sortable_columns ) {
+    $sortable_columns['custom-two'] = [ 'truck_truck', false ];
+    // false = asc (по умолчанию)
+    // true  = desc
+
+    return $sortable_columns;
+}

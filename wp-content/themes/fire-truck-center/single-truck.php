@@ -62,17 +62,24 @@ get_header();
                 <div class="truck-single__sku">
                     <?php echo the_field('sku', $post_id) ?>
                 </div>
-<!--                <div class="truck-single__price">-->
-<!--                    --><?php
-//                    if (get_field('_price', $post_id)){
-//                        echo '$' . number_format(get_field('_price', $post_id), 2, '.', ',');
-//                    } else {
-//                        echo 'N/A';
-//                    }
-//                    ?>
-<!--                    --><?php //?>
-<!---->
-<!--                </div>-->
+                <?php
+                    $field = get_field_object('show_as');
+                    if ($value = $field['value'] == 'price'){
+                        ?>
+                        <div class="truck-single__price">
+                            <?php
+                            if (get_field('_price', $post_id)){
+                                echo '$' . number_format(get_field('_price', $post_id), 0, '.', ',');
+                            } else {
+                                echo 'N/A';
+                            }
+                            ?>
+                            <?php ?>
+
+                        </div>
+                        <?php
+                    }
+                ?>
                 <div class="truck-single__meta">
                     <div class="truck-single__row">
                         <div class="name">
@@ -148,9 +155,9 @@ get_header();
                 </div>
                 <div class="truck-single__button">
                     <?php echo do_shortcode( '[contact-form-7 id="3ae4a73" title="Get a price"]' ); ?>
-<!--                    <a href="https://firetruck.center/contact-us/" class="button-skew">-->
-<!--                        <span>Get a price</span>-->
-<!--                    </a>-->
+                    <!--                    <a href="https://firetruck.center/contact-us/" class="button-skew">-->
+                    <!--                        <span>Get a price</span>-->
+                    <!--                    </a>-->
                 </div>
             </div>
             <div class="truck-single__tabs tabs-elements">
