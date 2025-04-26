@@ -16,6 +16,28 @@
             <div class="footer__brand">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/footer/logo-desctop.svg" alt="">
             </div>
+            <div class="footer__brand-soc">
+                <a href="<?php echo get_field('facebook', 'options');?>">
+                    <svg width="104" height="103" viewBox="0 0 104 103" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M103.056 51.3509C103.056 79.5187 80.0599 102.352 51.6917 102.352C23.3261 102.35 0.330078 79.5161 0.330078 51.3509C0.330078 23.1831 23.3261 0.349609 51.6943 0.349609C80.0625 0.349609 103.058 23.1831 103.058 51.3509H103.056Z" fill="#C92D36"/>
+                        <path d="M66.911 47.3932L66.0552 54.2163C65.9105 55.3561 64.9384 56.2135 63.7854 56.2135H52.6558V84.7406C51.4821 84.8459 50.2928 84.8998 49.0907 84.8998C46.402 84.8998 43.7779 84.6328 41.2418 84.1245V56.2135H32.682C31.896 56.2135 31.2549 55.5743 31.2549 54.7913V46.2535C31.2549 45.4705 31.896 44.8314 32.682 44.8314H41.2418V32.0271C41.2418 24.1695 47.63 17.8008 55.5125 17.8008H65.4994C66.2853 17.8008 66.9265 18.44 66.9265 19.2229V27.7608C66.9265 28.5437 66.2853 29.1829 65.4994 29.1829H58.3641C55.2126 29.1829 52.6584 31.7294 52.6584 34.8739V44.8339H64.6437C66.019 44.8339 67.0816 46.0353 66.9136 47.3958L66.911 47.3932Z" fill="white"/>
+                    </svg>
+                </a>
+                <a href="<?php echo get_field('instagram', 'options');?>">
+                    <svg width="104" height="103" viewBox="0 0 104 103" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M103.239 51.3509C103.239 79.5187 80.2432 102.352 51.875 102.352C23.5068 102.352 0.510742 79.5187 0.510742 51.3509C0.510742 23.1831 23.5068 0.349609 51.875 0.349609C80.2432 0.349609 103.239 23.1831 103.239 51.3509Z" fill="#C92D36"/>
+                        <path d="M65.8119 24.5977H37.9401C30.7582 24.5977 24.9336 30.3811 24.9336 37.5123V65.1872C24.9336 72.3183 30.7582 78.1018 37.9401 78.1018H65.8119C72.9938 78.1018 78.8185 72.3183 78.8185 65.1872V37.5123C78.8185 30.3811 72.9938 24.5977 65.8119 24.5977ZM74.1727 64.2656C74.1727 69.3585 70.0104 73.4914 64.8812 73.4914H38.8682C33.739 73.4914 29.5768 69.3585 29.5768 64.2656V38.4364C29.5768 33.3434 33.739 29.2106 38.8682 29.2106H64.8812C70.0104 29.2106 74.1727 33.3434 74.1727 38.4364V64.2656Z" fill="white"/>
+                        <path d="M51.9005 37.5117C44.2093 37.5117 37.9658 43.711 37.9658 51.3479C37.9658 58.9847 44.2093 65.184 51.9005 65.184C59.5916 65.184 65.8351 58.9847 65.8351 51.3479C65.8351 43.711 59.5916 37.5117 51.9005 37.5117ZM51.9005 60.5737C46.7816 60.5737 42.609 56.4306 42.609 51.3479C42.609 46.2652 46.7816 42.1221 51.9005 42.1221C57.0193 42.1221 61.1919 46.2652 61.1919 51.3479C61.1919 56.4306 57.0193 60.5737 51.9005 60.5737Z" fill="white"/>
+                        <path d="M66.7664 39.3587C65.2308 39.3587 63.9795 38.1163 63.9795 36.5915C63.9795 35.0666 65.2308 33.8242 66.7664 33.8242C68.3021 33.8242 69.5534 35.0666 69.5534 36.5915C69.5534 38.1163 68.3021 39.3587 66.7664 39.3587Z" fill="white"/>
+                    </svg>
+                </a>
+                <a href="<?php echo get_field('youtube', 'options');?>">
+                    <svg width="104" height="103" viewBox="0 0 104 103" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M103.33 51.3509C103.33 79.5187 80.334 102.352 51.9658 102.352C23.5976 102.352 0.601562 79.5187 0.601562 51.3509C0.601562 23.1831 23.5976 0.349609 51.9658 0.349609C80.334 0.349609 103.33 23.1831 103.33 51.3509Z" fill="#C92D36"/>
+                        <path d="M74.1036 29.7402H29.8334C25.4591 29.7402 21.9121 33.2622 21.9121 37.603V65.0956C21.9121 69.439 25.4591 72.9584 29.8334 72.9584H74.1036C78.4753 72.9584 82.0223 69.439 82.0223 65.0956V37.603C82.0223 33.2622 78.4753 29.7402 74.1036 29.7402ZM59.078 53.2489L46.7669 59.3584C45.345 60.0643 43.6749 59.04 43.6749 57.4639V45.245C43.6749 43.6688 45.3476 42.6446 46.7669 43.3479L59.078 49.4574C60.6498 50.2378 60.6498 52.4685 59.078 53.2489Z" fill="white"/>
+                    </svg>
+                </a>
+            </div>
             <div class="footer__nav">
                 <div class="footer__nav-column">
                     <div class="footer__nav-head">
@@ -26,6 +48,7 @@
                         <li class="footer__nav-item"><a class="footer__nav-lnk" href="<?php echo get_permalink(16); ?>">Contact Us</a></li>
                         <li class="footer__nav-item"><a class="footer__nav-lnk" href="<?php echo get_permalink(18); ?>">Sell Your Truck</a></li>
                         <li class="footer__nav-item"><a class="footer__nav-lnk" href="<?php echo get_permalink(60); ?>">View Available Trucks</a></li>
+						<li class="footer__nav-item"><a class="footer__nav-lnk" href="https://firetruck.center/custom-built-brush-trucks/">Custom Brush Trucks</a></li>
 <!--                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="#">Privacy Policy</a></li>-->
                     </ul>
                 </div>
@@ -39,6 +62,7 @@
                         <li class="footer__nav-item"><a class="footer__nav-lnk" href="https://firetruck.center/search-all-for-sale/?_sft_equipment_type=tanks">Tanks</a></li>
                         <li class="footer__nav-item"><a class="footer__nav-lnk" href="https://firetruck.center/search-all-for-sale/?_sft_equipment_type=aerials">Aerials</a></li>
                         <li class="footer__nav-item"><a class="footer__nav-lnk" href="https://firetruck.center/search-all-for-sale/?_sft_equipment_type=rescues">Rescues</a></li>
+						<li class="footer__nav-item"><a class="footer__nav-lnk" href="https://firetruck.center/search-all-for-sale/?_sft_equipment_type=cafs-dry-chem-arff">CAFS/Dry Chem /ARFF</a></li>
                         <li class="footer__nav-item"><a class="footer__nav-lnk" href="https://globalemergencyvehicles.com" target="_blank">Ambulances</a></li>
                     </ul>
                 </div>
