@@ -14,7 +14,7 @@
 	<footer class="footer">
 		<div class="footer__container main-container">
             <div class="footer__brand">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/footer/logo-desctop.svg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/footer/logo-desctop.svg" alt="Fire Truck Center" width="299" height="58">
             </div>
             <div class="footer__brand-soc">
                 <a href="<?php echo get_field('facebook', 'options');?>">

@@ -150,6 +150,22 @@ function fire_truck_center_scripts() {
 add_action( 'wp_enqueue_scripts', 'fire_truck_center_scripts' );
 
 /**
+ * Performance: defer non-critical theme JS to take it off the render-blocking
+ * path (improves FCP/LCP on mobile). common.js depends on the Swiper global and
+ * jQuery; Swiper is loaded with `defer` in header.php, so deferring common.js too
+ * preserves execution order (Swiper in <head> runs before common.js in the footer),
+ * and jQuery (non-deferred) always runs before any deferred script.
+ */
+function ftc_defer_theme_scripts( $tag, $handle ) {
+	$defer_handles = array( 'fire-truck-center-navigation' );
+	if ( in_array( $handle, $defer_handles, true ) && false === strpos( $tag, ' defer ' ) ) {
+		$tag = str_replace( ' src=', ' defer src=', $tag );
+	}
+	return $tag;
+}
+add_filter( 'script_loader_tag', 'ftc_defer_theme_scripts', 10, 2 );
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
