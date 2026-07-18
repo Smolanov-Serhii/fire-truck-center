@@ -1,15 +1,13 @@
 $(document).ready(function () {
 
     function MobMenuInit(){
-        if ($(".mobile-menu").length){
-            $( ".header__burger-button" ).on( "click", function() {
-                $('body').addClass('locked');
-                $('.mobile-menu').addClass('active');
-            } );
-
-            $( ".mobile-menu-close" ).on( "click", function() {
-                $('body').removeClass('locked');
-                $('.mobile-menu').removeClass('active');
+        if ($(".header__mob").length){
+            $( ".header__burger" ).on( "click", function() {
+                $(this).toggleClass('active');
+                $('.start__decoration-top').toggleClass('burger-active').css({transition: "all 1s", 'transition-delay': "0.5s"});
+                setTimeout(function() {
+                    $('.header__mob').fadeToggle(300);
+                }, 700);
             } );
         }
     }
@@ -69,7 +67,7 @@ $(document).ready(function () {
     }
     PopupInit();
 
-    function FeaturedContainer(){
+    function ReviewsContainer(){
         var swiper = new Swiper(".featured .swiper", {
             slidesPerView: 4,
             spaceBetween: 24,
@@ -77,32 +75,10 @@ $(document).ready(function () {
                 el: ".featured .swiper-pagination",
                 clickable: true,
             },
-            breakpoints: {
-                '320': {
-                    slidesPerView: 1.5,
-                    spaceBetween: 10,
-                },
-                '500': {
-                    slidesPerView: 2,
-                    spaceBetween: 10,
-                },
-                '768': {
-                    slidesPerView: 2.5,
-                    spaceBetween: 10,
-                },
-                '1024': {
-                    slidesPerView: 3,
-                    spaceBetween: 20,
-                },
-                '1400': {
-                    slidesPerView: 4,
-                    spaceBetween: 24,
-                },
-            },
         });
     }
     if ($('.featured').length) {
-        FeaturedContainer();
+        ReviewsContainer();
     }
 
 
@@ -113,6 +89,7 @@ $(document).ready(function () {
                 $(".tabs-elements .tabs-content-item").hide().eq($(this).index()) .css("display", "block")
                     .hide()
                     .fadeIn();
+                    PotrfolioCosm();
             }).eq(0).addClass("active");
             $(".tabs-elements .tabs-content-item").eq(0).addClass("active");
         }
@@ -124,98 +101,7 @@ $(document).ready(function () {
     });
     $('select').selectric().on('change', function() {
         $('.sf-field-submit input').trigger('click');
-
     });
-    $(document).on("sf:ajaxfinish", ".searchandfilter", function(){
-        console.log("ajax complete");
-        //so load your lightbox or JS scripts here again
-    });
-   function PopupTruck(){
-       if ($(".sale__result").length){
-           // $( ".sale__item-desctop" ).on( "click", function() {
-           //     let ItemLnk = $(this).data('href');
-           //     $.ajax({
-           //         type: 'GET', //or POST i don't know which one
-           //         url: ItemLnk, //or should this be the url: ?
-           //         success: function(data){
-           //             $html = $(data).find('.truck-single');
-           //             $html.appendTo(".popup-truck__wrapper");
-           //             SwiperThumb();
-           //             TabInit();
-           //             $('.popup-truck').fadeIn(300);
-           //         }
-           //     });
-           //     return false;
-           // } );
-           $( ".popup-truck__close" ).on( "click", function() {
-               $('.popup-truck').fadeOut(300);
-               setTimeout(function (){
-                   $('.popup-truck__wrapper').empty();
-               }, 300);
-           } );
-           $( ".sale__main-header .filter" ).on( "click", function() {
-               $('.sale__sidebar').addClass('active');
-           } );
-           $( ".sale__sidebar-close" ).on( "click", function() {
-               $('.sale__sidebar').removeClass('active');
-           } );
-       }
-   }
-   PopupTruck();
-
-    function SwiperThumb() {
-        var SmallSwiper = new Swiper(".truck-single__img .small", {
-            spaceBetween: 17,
-            slidesPerView: 5,
-            autoHeight: true,
-            freeMode: true,
-            watchSlidesProgress: true,
-        });
-        var BigSwiper = new Swiper(".truck-single__img .big", {
-            spaceBetween: 10,
-            autoHeight: true,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            thumbs: {
-                swiper: SmallSwiper,
-            },
-        });
-    }
-
-    if ($('.truck-single__img').length) {
-        SwiperThumb();
-    }
-
-    // if ($('.page-template').length) {
-    //     $("a[href*='#']").on("click", function (e) {
-    //         var anchor = $(this);
-    //         $('html, body').stop().animate({
-    //             scrollTop: $(anchor.attr('href')).offset().top
-    //         }, 1000);
-    //         e.preventDefault();
-    //         return false;
-    //     });
-    // }
-
-    if ($('.phone').length) {
-        // +1 (215) 559-1991
-        // $(".phone").on("input", function() {
-        //     var value = $(this).val();
-        //     var pos = value.indexOf('+1');
-        //     this.value = this.value.replace(/[^0-9+]/g, '');
-        //     if(pos === 0) return;
-        //     else if(pos < 0) $(this).val('+' + value);
-        //     else $(this).val(value.substr(pos));
-        // });
-        var element = document.getElementsByClassName("phone")[0];
-        const maskOptions = {
-            mask: '+{1} (000) 000-0000'
-        };
-        const mask = IMask(element, maskOptions);
-    }
-
 
 });
 

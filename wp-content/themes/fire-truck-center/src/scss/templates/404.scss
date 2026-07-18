@@ -23,9 +23,9 @@
   .container-star {
     background-image: linear-gradient(
                     to bottom,
-                    #1d1d1d 0%,
-                    #1d1d1d 70%,
-                    #1d1d1d 100%
+                    #213540 0%,
+                    #213540 70%,
+                    #213540 100%
     );
     &:after {
       background: radial-gradient(
@@ -126,9 +126,7 @@
     align-items: center;
     flex-direction: column;
     display: flex;
-  }
-  .title{
-    margin-bottom: 10vh
+    margin-bottom: 50px;
   }
   .title > * {
     display: inline-block;
@@ -185,7 +183,7 @@
         border-top-left-radius: 50%;
         border-bottom-right-radius: 50%;
         border-top-right-radius: 50%;
-        background-color: #1d1d1d;
+        background-color: #213540;
         width: 25px;
         height: 25px;
         position: absolute;
@@ -199,7 +197,7 @@
         left: -30px;
         .eye-left,
         .eye-right {
-          border: 4px solid #1d1d1d;
+          border: 4px solid #213540;
           width: 30px;
           height: 15px;
           border-bottom-left-radius: 100px;
@@ -213,7 +211,7 @@
             border-radius: 50%;
             width: 4px;
             height: 4px;
-            background-color: #1d1d1d;
+            background-color: #213540;
             top: -2px;
             left: -4px;
           }

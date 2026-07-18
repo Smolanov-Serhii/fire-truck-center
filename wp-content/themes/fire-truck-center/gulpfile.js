@@ -33,7 +33,6 @@ const scriptFiles = [
    './src/js/jquery-3.5.1.js',
    // './src/js/sfera.js',
    './src/js/aos.js',
-   './src/js/imask.js',
    // './src/js/jquery.event.move.js',
    // './src/js/jquery.twentytwenty.js',
    // './src/js/two-img.js',
@@ -43,7 +42,7 @@ const scriptFiles = [
    // './src/js/swiper-bundle.js',
    // './src/js/jquery.onepage-scroll.js',
    // './src/client/js/jquery.mCustomScrollbar.js',
-   './src/js/fresco.min.js',
+   // './src/js/fresco.min.js',
    './src/js/scripts.js'
 
 ]

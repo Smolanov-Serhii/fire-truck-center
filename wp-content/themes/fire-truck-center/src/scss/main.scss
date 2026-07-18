@@ -2,7 +2,6 @@
 @import "aos";
 @import "preloader";
 @import "default";
-@import "fresco";
 $transition: 0.2s;
 $px: 0.0520833333333333;
 $rem: 16;
@@ -29,9 +28,6 @@ body{
   height: auto;
   min-height: 100vh;
   position: relative;
-  @media all and (max-width: 1024px){
-    padding-bottom: 60px;
-  }
   @media all and (max-width: 768px){
     height: auto;
   }
@@ -237,7 +233,6 @@ main{
 
 @import "templates/preloader";
 @import "templates/header";
-@import "templates/breadcrumbs";
 @import "templates/banner";
 @import "templates/featured";
 @import "templates/text";
@@ -255,10 +250,6 @@ main{
 @import "templates/404";
 @import "templates/default-page";
 @import "templates/vstavka";
-@import "templates/post";
-@import "templates/pagination";
-@import "templates/blog";
 
 @import "templates/footer";
 
-@import "templates/cls-fix";

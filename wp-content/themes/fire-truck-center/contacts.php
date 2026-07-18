@@ -18,7 +18,7 @@ get_header();
                         </svg>
                         <div class="wrapper">
                             1991 Hartel Ave<br>
-                            Levitttown, PA 19057
+                            Levittown, PA 19057
                         </div>
                     </div>
                     <div class="three-column__item">
@@ -44,7 +44,13 @@ get_header();
                             </defs>
                         </svg>
                         <div class="wrapper">
-                            <a href="mailto:Vitaly.s@globalemergencyvehicles.com">help@firetruck.center</a>
+                            <a href="mailto:vit@firetruck.center">help@firetruck.center</a>
+                        </div>
+                    </div>
+                    <div class="three-column__item" data-block="business-hours">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="25" cy="25" r="21" stroke="#C92D36" stroke-width="3"/><path d="M25 12 L25 25 L34 31" stroke="#C92D36" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <div class="wrapper">
+                            Monday&#8211;Friday: 9:00 AM&#8211;5:00 PM<br>Saturday &amp; Sunday: Closed
                         </div>
                     </div>
                 </div>
