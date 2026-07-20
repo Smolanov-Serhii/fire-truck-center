@@ -19,6 +19,35 @@
     display: flex;
     flex-wrap: wrap;
   }
+  .rank-math-breadcrumb{
+    width: 100%;
+    p{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin: 0;
+    }
+    .separator{
+      margin: 0 10px;
+      color: #c92d36;
+      font-size: 0;
+      pointer-events: none;
+      &:before{
+        content: ">";
+        font-size: 18px;
+        line-height: 21px;
+        @media all and (max-width: 1024px){
+          font-size: 13px;
+        }
+        @media all and (max-width: 500px){
+          font-size: 12px;
+        }
+      }
+    }
+    .last{
+      color: #1D1D1D;
+    }
+  }
   &__list{
     display: flex;
     align-items: center;

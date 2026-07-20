@@ -1,0 +1,55 @@
+// ============================================================
+//  CLS fix — reserve space for lazy-loaded / unsized images
+//  Goal: keep Cumulative Layout Shift < 0.1 on mobile.
+//  Lazy images (lazysizes + WP Smush) have no intrinsic box
+//  until they load, so we reserve their space up front.
+// ============================================================
+
+// Equipment / category tiles (homepage). ACF images render as a
+// bare URL with no width/height, so reserve the box via aspect-ratio.
+.equipment__image{
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  @media all and (max-width: 500px){
+    aspect-ratio: 3 / 2;
+  }
+}
+
+// Listing thumbnails on the search / sale pages.
+.sale__item-image{
+  display: block;
+  img{
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+}
+
+// Footer logo (SVG, viewBox 299×58). width/height attrs are now in
+// the markup; this keeps it responsive without collapsing to 0 height.
+.footer__brand img{
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 299px;
+  aspect-ratio: 299 / 58;
+}
+
+// Hero banners — keep a reserved height before the background image
+// arrives so the title/subtitle don't jump on load (mobile especially).
+.banner,
+.banner-image{
+  min-height: 480px;
+  @media all and (max-width: 768px){
+    min-height: 70vh;
+  }
+}
+.banner__image,
+.banner-image__image{
+  height: 100%;
+}

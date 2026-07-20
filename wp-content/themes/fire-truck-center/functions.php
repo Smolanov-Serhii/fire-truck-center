@@ -9,7 +9,7 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.2.1' );
+	define( '_S_VERSION', '1.3.3' );
 }
 
 /**
@@ -45,6 +45,9 @@ function fire_truck_center_setup() {
 		* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		*/
 	add_theme_support( 'post-thumbnails' );
+
+	// Enable Rank Math breadcrumbs and its BreadcrumbList JSON-LD output.
+	add_theme_support( 'rank-math-breadcrumbs' );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
@@ -179,6 +182,12 @@ require get_template_directory() . '/inc/template-tags.php';
  * Functions which enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
+
+/**
+ * Truck catalog, taxonomy archive, breadcrumbs and Schema integrations.
+ */
+require get_template_directory() . '/inc/truck-catalog.php';
+require get_template_directory() . '/inc/seo.php';
 
 /**
  * Customizer additions.

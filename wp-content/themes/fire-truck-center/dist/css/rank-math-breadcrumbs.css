@@ -1,0 +1,19 @@
+.breadcrumbs .rank-math-breadcrumb {
+  width: 100%;
+}
+
+.breadcrumbs .rank-math-breadcrumb p {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+}
+
+.breadcrumbs .rank-math-breadcrumb .separator {
+  margin: 0 10px;
+  color: #c92d36;
+}
+
+.breadcrumbs .rank-math-breadcrumb .last {
+  color: #1d1d1d;
+}

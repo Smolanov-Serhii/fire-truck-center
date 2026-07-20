@@ -1,18 +1,23 @@
 $(document).ready(function () {
 
     function MobMenuInit(){
-        if ($(".header__mob").length){
-            $( ".header__burger" ).on( "click", function() {
-                $(this).toggleClass('active');
-                $('.start__decoration-top').toggleClass('burger-active').css({transition: "all 1s", 'transition-delay': "0.5s"});
-                setTimeout(function() {
-                    $('.header__mob').fadeToggle(300);
-                }, 700);
+        if ($(".mobile-menu").length){
+            $( ".header__burger-button" ).on( "click", function() {
+                $('body').addClass('locked');
+                $('.mobile-menu').addClass('active');
+            } );
+
+            $( ".mobile-menu-close" ).on( "click", function() {
+                $('body').removeClass('locked');
+                $('.mobile-menu').removeClass('active');
             } );
         }
     }
     MobMenuInit();
     function AosStart(){
+        if (typeof AOS === 'undefined') {
+            return;
+        }
         AOS.init({
             // Global settings:
             disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
@@ -67,7 +72,7 @@ $(document).ready(function () {
     }
     PopupInit();
 
-    function ReviewsContainer(){
+    function FeaturedContainer(){
         var swiper = new Swiper(".featured .swiper", {
             slidesPerView: 4,
             spaceBetween: 24,
@@ -75,10 +80,32 @@ $(document).ready(function () {
                 el: ".featured .swiper-pagination",
                 clickable: true,
             },
+            breakpoints: {
+                '320': {
+                    slidesPerView: 1.5,
+                    spaceBetween: 10,
+                },
+                '500': {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+                '768': {
+                    slidesPerView: 2.5,
+                    spaceBetween: 10,
+                },
+                '1024': {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+                '1400': {
+                    slidesPerView: 4,
+                    spaceBetween: 24,
+                },
+            },
         });
     }
-    if ($('.featured').length) {
-        ReviewsContainer();
+    if ($('.featured').length && typeof Swiper !== 'undefined') {
+        FeaturedContainer();
     }
 
 
@@ -89,19 +116,108 @@ $(document).ready(function () {
                 $(".tabs-elements .tabs-content-item").hide().eq($(this).index()) .css("display", "block")
                     .hide()
                     .fadeIn();
-                    PotrfolioCosm();
             }).eq(0).addClass("active");
             $(".tabs-elements .tabs-content-item").eq(0).addClass("active");
         }
     }
     TabInit();
 
-    $(function() {
-        $('select').selectric();
+    function SelectricInit($context) {
+        $context.find('select').each(function() {
+            var $select = $(this);
+            if (!$select.closest('.selectric-wrapper').length) {
+                $select.selectric();
+            }
+        });
+    }
+    SelectricInit($(document));
+
+    $('.searchandfilter').each(function() {
+        var form = this;
+        var selectricRefreshQueued = false;
+        var observer = new MutationObserver(function(mutations) {
+            var hasNewSelect = mutations.some(function(mutation) {
+                return Array.prototype.some.call(mutation.addedNodes, function(node) {
+                    return node.nodeType === 1 && (node.matches('select') || node.querySelector('select'));
+                });
+            });
+
+            if (!hasNewSelect || selectricRefreshQueued) {
+                return;
+            }
+
+            selectricRefreshQueued = true;
+            window.requestAnimationFrame(function() {
+                SelectricInit($(form));
+                selectricRefreshQueued = false;
+            });
+        });
+
+        observer.observe(form, { childList: true, subtree: true });
     });
-    $('select').selectric().on('change', function() {
-        $('.sf-field-submit input').trigger('click');
+
+    $('.truck-types__select').on('change.ftcTruckType', function() {
+        var termUrl = $(this).val();
+        if (termUrl) {
+            window.location.assign(termUrl);
+        }
     });
+
+    function CatalogControlsInit(){
+        if (!$('.sale__result').length) {
+            return;
+        }
+
+        $(".popup-truck__close").on("click", function() {
+            $('.popup-truck').fadeOut(300);
+            setTimeout(function() {
+                $('.popup-truck__wrapper').empty();
+            }, 300);
+        });
+
+        $(".sale__main-header .filter").on("click", function() {
+            $('.sale__sidebar').addClass('active');
+            $(this).attr('aria-expanded', 'true');
+        });
+
+        $(".sale__sidebar-close").on("click", function() {
+            $('.sale__sidebar').removeClass('active');
+            $('.sale__main-header .filter').attr('aria-expanded', 'false');
+        });
+    }
+    CatalogControlsInit();
+
+    function SwiperThumb() {
+        var SmallSwiper = new Swiper(".truck-single__img .small", {
+            spaceBetween: 17,
+            slidesPerView: 5,
+            autoHeight: true,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+
+        new Swiper(".truck-single__img .big", {
+            spaceBetween: 10,
+            autoHeight: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            thumbs: {
+                swiper: SmallSwiper,
+            },
+        });
+    }
+
+    if ($('.truck-single__img').length && typeof Swiper !== 'undefined') {
+        SwiperThumb();
+    }
+
+    if ($('.phone').length && typeof IMask !== 'undefined') {
+        IMask(document.getElementsByClassName('phone')[0], {
+            mask: '+{1} (000) 000-0000'
+        });
+    }
 
 });
 

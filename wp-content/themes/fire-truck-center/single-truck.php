@@ -3,6 +3,7 @@ $post_id = get_the_ID();
 get_header();
 ?>
     <main class="main">
+        <?php get_template_part( 'template-parts/content', 'breadcrumbs' ); ?>
         <div class="truck-single main-container">
             <div class="truck-single__img">
                 <div class="big truck-single__swiper swiper">

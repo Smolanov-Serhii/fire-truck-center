@@ -49,7 +49,8 @@
                         <li class="footer__nav-item"><a class="footer__nav-lnk" href="<?php echo get_permalink(18); ?>">Sell Your Truck</a></li>
                         <li class="footer__nav-item"><a class="footer__nav-lnk" href="<?php echo get_permalink(60); ?>">View Available Trucks</a></li>
 						<li class="footer__nav-item"><a class="footer__nav-lnk" href="https://firetruck.center/custom-built-brush-trucks/">Custom Brush Trucks</a></li>
-<!--                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="#">Privacy Policy</a></li>-->
+                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="<?php echo esc_url( home_url( '/faq/' ) ); ?>">FAQ</a></li>
+                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="<?php echo esc_url( home_url( '/privacy-policy-2/' ) ); ?>">Privacy Policy</a></li>
                     </ul>
                 </div>
                 <div class="footer__nav-column">
@@ -88,7 +89,7 @@
                                 <path d="M8 7.33331C8.55228 7.33331 9 6.8856 9 6.33331C9 5.78103 8.55228 5.33331 8 5.33331C7.44772 5.33331 7 5.78103 7 6.33331C7 6.8856 7.44772 7.33331 8 7.33331Z" fill="#828282"/>
                                 <path d="M8.00002 1.33331C6.59472 1.33324 5.24619 1.88782 4.24752 2.87651C3.24884 3.8652 2.68074 5.20809 2.66669 6.61331C2.66669 10.2666 7.36669 14.3333 7.56669 14.5066C7.68744 14.6099 7.84112 14.6667 8.00002 14.6667C8.15892 14.6667 8.3126 14.6099 8.43335 14.5066C8.66669 14.3333 13.3334 10.2666 13.3334 6.61331C13.3193 5.20809 12.7512 3.8652 11.7525 2.87651C10.7538 1.88782 9.40532 1.33324 8.00002 1.33331ZM8.00002 8.66665C7.53853 8.66665 7.0874 8.5298 6.70369 8.27341C6.31997 8.01702 6.02091 7.6526 5.8443 7.22624C5.6677 6.79988 5.62149 6.33072 5.71152 5.8781C5.80155 5.42548 6.02378 5.00972 6.3501 4.6834C6.67643 4.35707 7.09219 4.13485 7.54481 4.04481C7.99743 3.95478 8.46659 4.00099 8.89295 4.17759C9.31931 4.3542 9.68373 4.65327 9.94012 5.03698C10.1965 5.4207 10.3334 5.87182 10.3334 6.33331C10.3334 6.95215 10.0875 7.54564 9.64994 7.98323C9.21235 8.42081 8.61886 8.66665 8.00002 8.66665Z" fill="#828282"/>
                             </svg>
-                            <span>1991 Hartel Ave<br>Levitttown, PA 19057</span>
+                            <span>1991 Hartel Ave<br>Levittown, PA 19057</span>
                         </li>
                         <li class="footer__nav-item">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">

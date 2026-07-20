@@ -7,9 +7,15 @@
   text-align: center;
   z-index: 100;
   transition: all 0.5s ease;
+  @media all and (max-width: 1280px){
+    padding: 2.2rem 0;
+  }
   &.moved{
     background-color: #1D1D1D;
     padding: 0;
+    @media all and (max-width: 1280px){
+      padding: 20px 0;
+    }
     .header__logo{
       img{
         height: 50px;
@@ -18,8 +24,19 @@
   }
   &__logo{
     margin-bottom: -10px;
+    .custom-logo-link{
+      @media all and (max-width: 1500px){
+        display: block;
+        max-width: 200px;
+      }
+    }
     img{
       transition: all 0.5s ease;
+    }
+  }
+  &__nav{
+    @media all and (max-width: 1280px){
+      display: none;
     }
   }
   &__container{
@@ -34,6 +51,83 @@
       justify-content: center;
       li{
         margin-right: 3.2rem;
+        &.disabled, &.red{
+          cursor: pointer;
+          @media all and (max-width: 1280px){
+            margin-top: 20px;
+            margin-bottom: 20px;
+          }
+          > a{
+            pointer-events: none;
+            padding: 7px 20px;
+            background-color: #C92D36;
+            display: flex;
+            align-items: center;
+            @media all and (max-width: 1280px){
+              background-color: transparent;
+              text-align: center;
+              justify-content: center;
+            }
+            &:after{
+              content: "";
+              display: block;
+              width: 6px;
+              height: 6px;
+              border-right: 1px solid #FFFFFF;
+              border-bottom: 1px solid #FFFFFF;
+              transform: rotate(45deg);
+              margin-left: 10px;
+              @media all and (max-width: 1280px){
+                display: none;
+              }
+            }
+          }
+        }
+        &.red{
+          > a{
+            pointer-events: auto;
+          }
+        }
+        &.menu-item-has-children{
+          position: relative;
+          @media all and (max-width: 1280px){
+            margin-top: 20px;
+            margin-bottom: 20px;
+          }
+          &:hover{
+            .sub-menu{
+              display: block;
+            }
+          }
+          .sub-menu{
+            display: none;
+            padding: 20px;
+            background-color: #1D1D1D;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            @media all and (max-width: 1280px){
+              display: block;
+              position: static;
+              padding: 0;
+            }
+            a{
+              white-space: nowrap;
+              padding: 5px 0;
+              @media all and (max-width: 1280px){
+                font-size: 18px;
+              }
+            }
+            li{
+              padding: 0;
+              margin-right: 0;
+              text-align: left;
+              @media all and (max-width: 1280px){
+                text-align: center;
+              }
+            }
+          }
+        }
         &.current_page_item{
           a{
             border-bottom: 1px solid #C92D36;
@@ -49,6 +143,9 @@
           border-bottom: 1px solid transparent;
           display: inline-block;
           transition: 0.1s ease-in-out;
+          @media all and (max-width: 1500px){
+            font-size: 14px;
+          }
           &:hover{
             border-bottom: 1px solid #C92D36;
           }
@@ -62,6 +159,9 @@
     padding-top: 2.8rem;
     padding-bottom: 2.8rem;
     padding-left: 11.6rem;
+    @media all and (max-width: 1280px){
+      display: none;
+    }
     img{
       position: absolute;
       left: 0;
@@ -79,10 +179,48 @@
         font-weight: 500;
         text-transform: uppercase;
         text-decoration: none;
+        @media all and (max-width: 1500px){
+          font-size: 14px;
+        }
       }
       svg{
         margin: auto 1.8rem;
       }
+    }
+  }
+  &__burger{
+    display: none;
+    align-items: center;
+    &-button{
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      > span{
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: #FFFFFF;
+        @media all and (max-width: 500px){
+          display: none;
+        }
+      }
+    }
+    &-wrapper{
+      margin-left: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      span{
+        width: 30px;
+        height: 2px;
+        display: block;
+        margin: 4px 0;
+        background-color: #FFFFFF;
+      }
+    }
+    @media all and (max-width: 1280px){
+      display: block;
     }
   }
 }

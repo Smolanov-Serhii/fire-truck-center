@@ -28,7 +28,6 @@ $post_id = get_the_ID();
     <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/></noscript>
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<?php wp_head(); ?>
-	<?php echo the_field('microdata', $post_id); ?>
 	<!-- Meta Pixel Code (deferred until first interaction to avoid blocking page load) -->
 <script>
 /* fbq stub: defined immediately so any fbq() calls queue, but fbevents.js
