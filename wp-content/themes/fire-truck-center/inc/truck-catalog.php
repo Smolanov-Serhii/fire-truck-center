@@ -23,7 +23,7 @@ function ftc_get_truck_filter_form_id() {
  * @return void
  */
 function ftc_enable_truck_filter_dynamic_counts() {
-	$settings_version = '1';
+	$settings_version = '2';
 	if ( $settings_version === get_option( 'ftc_truck_filter_settings_version' ) ) {
 		return;
 	}
@@ -42,7 +42,11 @@ function ftc_enable_truck_filter_dynamic_counts() {
 
 	foreach ( $fields as &$field ) {
 		if ( isset( $field['type'] ) && 'taxonomy' === $field['type'] ) {
-			$field['hide_empty'] = 1;
+			$field['hide_empty'] = 0;
+		}
+
+		if ( isset( $field['type'] ) && 'post_meta' === $field['type'] && isset( $field['meta_type'] ) && 'choice' === $field['meta_type'] ) {
+			$field['hide_empty'] = 0;
 		}
 	}
 	unset( $field );
@@ -51,6 +55,60 @@ function ftc_enable_truck_filter_dynamic_counts() {
 	update_option( 'ftc_truck_filter_settings_version', $settings_version, false );
 }
 add_action( 'init', 'ftc_enable_truck_filter_dynamic_counts', 20 );
+
+/**
+ * Keep empty filter choices visible but prevent users from selecting them.
+ *
+ * The currently selected value remains enabled even when an old bookmarked
+ * URL no longer has results, so the user can still remove that selection.
+ *
+ * @param array $input_args     Search & Filter input arguments.
+ * @param int   $search_form_id Search & Filter form ID.
+ * @return array
+ */
+function ftc_disable_empty_truck_filter_options( $input_args, $search_form_id ) {
+	if (
+		ftc_get_truck_filter_form_id() !== (int) $search_form_id
+		|| empty( $input_args['options'] )
+		|| ! is_array( $input_args['options'] )
+	) {
+		return $input_args;
+	}
+
+	$defaults = isset( $input_args['defaults'] ) && is_array( $input_args['defaults'] )
+		? array_map( 'strval', $input_args['defaults'] )
+		: array();
+
+	foreach ( $input_args['options'] as $option ) {
+		if (
+			! is_object( $option )
+			|| ! isset( $option->count )
+			|| 0 !== (int) $option->count
+			|| ! isset( $option->value )
+			|| '' === (string) $option->value
+		) {
+			continue;
+		}
+
+		$selected_value = isset( $option->selected_value ) ? $option->selected_value : $option->value;
+		if ( in_array( (string) $selected_value, $defaults, true ) ) {
+			continue;
+		}
+
+		if ( ! isset( $option->attributes ) || ! is_array( $option->attributes ) ) {
+			$option->attributes = array();
+		}
+
+		$option->attributes['disabled'] = 'disabled';
+		$option->attributes['class']    = trim(
+			( isset( $option->attributes['class'] ) ? $option->attributes['class'] : '' )
+			. ' ftc-filter-option-unavailable'
+		);
+	}
+
+	return $input_args;
+}
+add_filter( 'sf_input_object_pre', 'ftc_disable_empty_truck_filter_options', 20, 2 );
 
 /**
  * Expose Truck Types in wp-admin so term descriptions and Rank Math metadata
@@ -147,6 +205,44 @@ function ftc_get_equipment_type_request_context() {
 
 	return $term instanceof WP_Term ? $term : false;
 }
+
+/**
+ * Scope Search & Filter results and option counts to the active Truck Type.
+ *
+ * The taxonomy archive condition on the main WordPress query is not inherited
+ * by Search & Filter's internal count queries. Adding it through the plugin's
+ * query filter keeps brands, chassis, pump and tank choices limited to trucks
+ * that belong to the current equipment type.
+ *
+ * @param array $query_args     Search & Filter query arguments.
+ * @param int   $search_form_id Search & Filter form ID.
+ * @return array
+ */
+function ftc_scope_truck_filter_to_equipment_type( $query_args, $search_form_id ) {
+	if ( ftc_get_truck_filter_form_id() !== (int) $search_form_id ) {
+		return $query_args;
+	}
+
+	$term = ftc_get_equipment_type_request_context();
+	if ( ! $term ) {
+		return $query_args;
+	}
+
+	if ( empty( $query_args['tax_query'] ) || ! is_array( $query_args['tax_query'] ) ) {
+		$query_args['tax_query'] = array();
+	}
+
+	$query_args['tax_query'][] = array(
+		'taxonomy'         => 'equipment_type',
+		'field'            => 'term_id',
+		'terms'            => array( (int) $term->term_id ),
+		'include_children' => true,
+		'operator'         => 'IN',
+	);
+
+	return $query_args;
+}
+add_filter( 'sf_edit_query_args', 'ftc_scope_truck_filter_to_equipment_type', 20, 2 );
 
 /**
  * Keep the remaining Search & Filter controls on the active taxonomy URL.

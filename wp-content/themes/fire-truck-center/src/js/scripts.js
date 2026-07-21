@@ -125,36 +125,144 @@ $(document).ready(function () {
     function SelectricInit($context) {
         $context.find('select').each(function() {
             var $select = $(this);
-            if (!$select.closest('.selectric-wrapper').length) {
+            if ($select.closest('.selectric-wrapper').length) {
+                $select.selectric('refresh');
+            } else {
                 $select.selectric();
             }
         });
     }
-    SelectricInit($(document));
 
-    $('.searchandfilter').each(function() {
-        var form = this;
-        var selectricRefreshQueued = false;
-        var observer = new MutationObserver(function(mutations) {
-            var hasNewSelect = mutations.some(function(mutation) {
-                return Array.prototype.some.call(mutation.addedNodes, function(node) {
-                    return node.nodeType === 1 && (node.matches('select') || node.querySelector('select'));
-                });
-            });
+    function FilterAvailabilityInit($context) {
+        $context.find('.searchandfilter li[data-sf-count]').each(function() {
+            var $item = $(this);
+            var $input = $item.children('input[type="checkbox"], input[type="radio"]').first();
+            var isUnavailable = String($item.attr('data-sf-count')) === '0' && !$input.prop('checked');
 
-            if (!hasNewSelect || selectricRefreshQueued) {
+            if (!$input.length) {
                 return;
             }
 
-            selectricRefreshQueued = true;
+            $item.toggleClass('ftc-filter-option-unavailable', isUnavailable);
+            if ($input.prop('disabled') !== isUnavailable) {
+                $input.prop('disabled', isUnavailable);
+            }
+
+            if (isUnavailable) {
+                $input.attr('aria-disabled', 'true');
+            } else {
+                $input.removeAttr('aria-disabled');
+            }
+        });
+
+        $context.find('.searchandfilter select option[data-sf-count]').each(function() {
+            var $option = $(this);
+            var isUnavailable = String($option.attr('data-sf-count')) === '0' && !$option.prop('selected');
+
+            $option.toggleClass('ftc-filter-option-unavailable', isUnavailable);
+            if ($option.prop('disabled') !== isUnavailable) {
+                $option.prop('disabled', isUnavailable);
+            }
+        });
+    }
+
+    FilterAvailabilityInit($(document));
+    SelectricInit($(document));
+
+    // Selectric and Search & Filter can be initialized with different jQuery
+    // instances. Forward Selectric's custom event as a native change event so
+    // Search & Filter receives it and refreshes the results and option counts.
+    $(document).on('selectric-change.ftcSearchFilter', '.searchandfilter select', function() {
+        this.dispatchEvent(new Event('change', { bubbles: true }));
+    });
+
+    // Search & Filter enables every control when an AJAX request finishes.
+    // Restore the facet-specific disabled state after that final plugin step.
+    var filterAjaxEvents = 'sf:ajaxfinish.ftcFilterAvailability sf:ajaxformfinish.ftcFilterAvailability';
+    var refreshFilterAvailability = function() {
+        var $form = $(this);
+
+        window.requestAnimationFrame(function() {
+            FilterAvailabilityInit($form);
+            SelectricInit($form);
+        });
+    };
+
+    $(document).on(filterAjaxEvents, '.searchandfilter', refreshFilterAvailability);
+
+    // The theme bundle and WordPress can expose different jQuery instances.
+    // Search & Filter dispatches its lifecycle events through the WP instance.
+    if (window.jQuery && window.jQuery !== $) {
+        window.jQuery(document).on(filterAjaxEvents, '.searchandfilter', refreshFilterAvailability);
+    }
+
+    // Keep unavailable checkbox rows inert even if another script temporarily
+    // changes the native disabled property between AJAX lifecycle events.
+    document.addEventListener('click', function(event) {
+        var unavailableItem = event.target.closest('.searchandfilter .ftc-filter-option-unavailable');
+
+        if (!unavailableItem) {
+            return;
+        }
+
+        event.preventDefault();
+        event.stopImmediatePropagation();
+    }, true);
+
+    if (document.body && $('.searchandfilter').length) {
+        var filterRefreshQueued = false;
+        var selectricRefreshNeeded = false;
+        var filterObserver = new MutationObserver(function(mutations) {
+            var mustRefreshAvailability = mutations.some(function(mutation) {
+                if (
+                    mutation.type === 'attributes'
+                    && mutation.target.closest('.searchandfilter')
+                ) {
+                    return true;
+                }
+
+                return Array.prototype.some.call(mutation.addedNodes, function(node) {
+                    if (node.nodeType !== 1) {
+                        return false;
+                    }
+
+                    if (
+                        node.matches('.searchandfilter, select')
+                        || node.querySelector('.searchandfilter, select')
+                    ) {
+                        selectricRefreshNeeded = true;
+                    }
+
+                    return Boolean(
+                        node.closest('.searchandfilter')
+                        || node.querySelector('.searchandfilter')
+                    );
+                });
+            });
+
+            if (!mustRefreshAvailability || filterRefreshQueued) {
+                return;
+            }
+
+            filterRefreshQueued = true;
             window.requestAnimationFrame(function() {
-                SelectricInit($(form));
-                selectricRefreshQueued = false;
+                var $forms = $('.searchandfilter');
+                FilterAvailabilityInit($forms);
+                if (selectricRefreshNeeded) {
+                    SelectricInit($forms);
+                }
+                selectricRefreshNeeded = false;
+                filterRefreshQueued = false;
             });
         });
 
-        observer.observe(form, { childList: true, subtree: true });
-    });
+        filterObserver.observe(document.body, {
+            childList: true,
+            subtree: true,
+            attributes: true,
+            attributeFilter: ['disabled']
+        });
+    }
 
     $('.truck-types__select').on('change.ftcTruckType', function() {
         var termUrl = $(this).val();

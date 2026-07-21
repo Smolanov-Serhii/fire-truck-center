@@ -70,6 +70,18 @@
               }
             }
           }
+          li.ftc-filter-option-unavailable{
+            opacity: 0.45;
+            color: #7f8491;
+            cursor: not-allowed;
+            input,
+            label{
+              cursor: not-allowed;
+            }
+          }
+          select option.ftc-filter-option-unavailable{
+            color: #9a9da5;
+          }
         }
         h4{
           padding-top: 0;

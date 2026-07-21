@@ -44,11 +44,12 @@
                         Quick links
                     </div>
                     <ul class="footer__nav-list">
-                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="<?php echo home_url(); ?>">Home</a></li>
-                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="<?php echo get_permalink(16); ?>">Contact Us</a></li>
-                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="<?php echo get_permalink(18); ?>">Sell Your Truck</a></li>
-                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="<?php echo get_permalink(60); ?>">View Available Trucks</a></li>
-						<li class="footer__nav-item"><a class="footer__nav-lnk" href="https://firetruck.center/custom-built-brush-trucks/">Custom Brush Trucks</a></li>
+                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></li>
+                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="<?php echo esc_url( home_url( '/contact-us/' ) ); ?>">Contact us</a></li>
+                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="<?php echo esc_url( home_url( '/sell-your-fire-truck/' ) ); ?>">Appraise your truck</a></li>
+                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="<?php echo esc_url( home_url( '/search-fire-truck-for-sale/' ) ); ?>">Available Trucks</a></li>
+                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="<?php echo esc_url( home_url( '/blog/' ) ); ?>">Blog</a></li>
+                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="<?php echo esc_url( home_url( '/about-us/' ) ); ?>">About Us</a></li>
                         <li class="footer__nav-item"><a class="footer__nav-lnk" href="<?php echo esc_url( home_url( '/faq/' ) ); ?>">FAQ</a></li>
                         <li class="footer__nav-item"><a class="footer__nav-lnk" href="<?php echo esc_url( home_url( '/privacy-policy-2/' ) ); ?>">Privacy Policy</a></li>
                     </ul>
@@ -58,13 +59,13 @@
                         Apparatus Type
                     </div>
                     <ul class="footer__nav-list">
-                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="https://firetruck.center/search-all-for-sale?_sft_equipment_type=pumper">Engines & Pumpers</a></li>
-                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="https://firetruck.center/search-all-for-sale/?_sft_equipment_type=wildland-brush-trucks">Wildland & Brush</a></li>
-                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="https://firetruck.center/search-all-for-sale/?_sft_equipment_type=tanks">Tanks</a></li>
-                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="https://firetruck.center/search-all-for-sale/?_sft_equipment_type=aerials">Aerials</a></li>
-                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="https://firetruck.center/search-all-for-sale/?_sft_equipment_type=rescues">Rescues</a></li>
-						<li class="footer__nav-item"><a class="footer__nav-lnk" href="https://firetruck.center/search-all-for-sale/?_sft_equipment_type=cafs-dry-chem-arff">CAFS/Dry Chem /ARFF</a></li>
-                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="https://globalemergencyvehicles.com" target="_blank">Ambulances</a></li>
+                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="<?php echo esc_url( home_url( '/equipment_type/pumper/' ) ); ?>">Engines / Pumpers</a></li>
+                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="<?php echo esc_url( home_url( '/equipment_type/aerials/' ) ); ?>">Aerials / Quints</a></li>
+                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="<?php echo esc_url( home_url( '/equipment_type/used-brush-trucks-for-sale/' ) ); ?>">Wildland / Brush</a></li>
+                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="<?php echo esc_url( home_url( '/equipment_type/rescues/' ) ); ?>">Rescues</a></li>
+                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="<?php echo esc_url( home_url( '/equipment_type/tanker/' ) ); ?>">Tankers</a></li>
+                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="<?php echo esc_url( home_url( '/equipment_type/cafs-dry-chem-arff/' ) ); ?>">CAFS / Dry Chem / ARFF</a></li>
+                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="https://globalemergencyvehicles.com/ambulance-for-sale/" target="_blank" rel="noopener noreferrer">Ambulances</a></li>
                     </ul>
                 </div>
 <!--                <div class="footer__nav-column">-->

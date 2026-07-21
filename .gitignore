@@ -1,1 +1,35 @@
+# Local IDE and development-tool state
+/.idea/
+/.osp/
+/.playwright-cli/
+
+# Logs and machine-local files
+*.log
+error_log
+Thumbs.db
+.DS_Store
+
+# Local WordPress installation and configuration
+/wp-admin/
+/wp-includes/
+/index.php
+/license.txt
+/readme.html
+/wp-*.php
+/xmlrpc.php
+/wordfence-waf.php
+/wp-cli.yml
+
+# Local audit/reference notes
+/PERFORMANCE-checklist.md
+/SEO-semantics-reference.md
+
+# Keep only the custom project theme under version control.
+# Plugins, uploads, caches, generated media and bundled stock themes stay local.
+/wp-content/*
+!/wp-content/themes/
+/wp-content/themes/*
+!/wp-content/themes/fire-truck-center/
+
+# Theme dependencies are installed locally
 /wp-content/themes/fire-truck-center/node_modules/
