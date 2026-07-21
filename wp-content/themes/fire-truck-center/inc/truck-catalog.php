@@ -131,10 +131,35 @@ function ftc_enable_equipment_type_archives( $args, $taxonomy, $object_type ) { 
 	$args['show_admin_column']   = true;
 	$args['show_in_nav_menus']   = true;
 	$args['show_in_rest']        = true;
+	$args['rewrite']             = array(
+		'slug'         => 'equipment_type',
+		'with_front'   => false,
+		'hierarchical' => false,
+	);
 
 	return $args;
 }
 add_filter( 'register_taxonomy_args', 'ftc_enable_equipment_type_archives', 20, 3 );
+
+/**
+ * Flush rewrite rules once after enabling public Truck Type archives.
+ *
+ * Production previously kept the old non-public taxonomy rules, causing all
+ * /equipment_type/{term}/ URLs to return 404 even though the terms existed.
+ *
+ * @return void
+ */
+function ftc_maybe_flush_equipment_type_rewrite_rules() {
+	$rewrite_version = '1';
+
+	if ( $rewrite_version === get_option( 'ftc_equipment_type_rewrite_version' ) ) {
+		return;
+	}
+
+	flush_rewrite_rules( false );
+	update_option( 'ftc_equipment_type_rewrite_version', $rewrite_version, false );
+}
+add_action( 'init', 'ftc_maybe_flush_equipment_type_rewrite_rules', 99 );
 
 /**
  * Prepare a Truck Type archive as the Search & Filter result query.

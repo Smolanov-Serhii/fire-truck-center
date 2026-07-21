@@ -11,7 +11,13 @@ $catalog_content = get_post_field( 'post_content', $catalog_page_id );
 get_header();
 ?>
 <main class="main">
-	<?php get_template_part( 'template-parts/content', 'banner-image' ); ?>
+	<?php
+	get_template_part(
+		'template-parts/content',
+		'banner-image',
+		array( 'title' => __( 'Used Fire Trucks for Sale Inventory', 'fire-truck-center' ) )
+	);
+	?>
 	<?php get_template_part( 'template-parts/content', 'breadcrumbs' ); ?>
 
 	<div class="sale">

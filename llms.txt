@@ -1,0 +1,32 @@
+# Fire Truck Center
+
+> Fire Truck Center sells inspected used fire trucks and custom-built fire apparatus to fire departments and emergency services. Inventory includes pumpers, aerials, rescue trucks, tankers, wildland and brush trucks, and CAFS, dry chemical, and ARFF apparatus. Worldwide delivery, financing, inspections, pump tests, and aerial certifications are available.
+
+## Primary pages
+
+- [Home](https://firetruck.center/): Company overview and featured fire trucks.
+- [Used Fire Trucks for Sale](https://firetruck.center/search-fire-truck-for-sale/): Complete current inventory with filters.
+- [Sell or Appraise Your Fire Truck](https://firetruck.center/sell-your-fire-truck/): Submit a vehicle for appraisal or sale.
+- [About Fire Truck Center](https://firetruck.center/about-us/): Company information.
+- [Contact Fire Truck Center](https://firetruck.center/contact-us/): Sales and support contacts.
+- [Frequently Asked Questions](https://firetruck.center/faq/): Common questions about buying and selling fire apparatus.
+- [Fire Truck Center Blog](https://firetruck.center/blog/): Guides and news about used fire apparatus.
+
+## Fire truck inventory by type
+
+- [Engines and Pumpers](https://firetruck.center/equipment_type/used-pumpers-for-sale/)
+- [Aerials and Quints](https://firetruck.center/equipment_type/used-aerial-trucks-for-sale/)
+- [Wildland and Brush Trucks](https://firetruck.center/equipment_type/brush-trucks-for-sale/)
+- [Rescue Trucks](https://firetruck.center/equipment_type/used-rescue-trucks-for-sale/)
+- [Tankers](https://firetruck.center/equipment_type/used-tankers-for-sale/)
+- [CAFS, Dry Chemical, and ARFF Trucks](https://firetruck.center/equipment_type/cafs-dry-chem-trucks-for-sale/)
+
+## Additional resources
+
+- [XML Sitemap](https://firetruck.center/sitemap_index.xml): Index of crawlable website content.
+
+## Contact
+
+- Phone: +1 215-559-9119
+- Email: help@firetruck.center
+- Address: 1991 Hartel Ave, Levittown, PA 19057, United States

@@ -59,12 +59,12 @@
                         Apparatus Type
                     </div>
                     <ul class="footer__nav-list">
-                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="<?php echo esc_url( home_url( '/equipment_type/pumper/' ) ); ?>">Engines / Pumpers</a></li>
-                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="<?php echo esc_url( home_url( '/equipment_type/aerials/' ) ); ?>">Aerials / Quints</a></li>
-                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="<?php echo esc_url( home_url( '/equipment_type/used-brush-trucks-for-sale/' ) ); ?>">Wildland / Brush</a></li>
-                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="<?php echo esc_url( home_url( '/equipment_type/rescues/' ) ); ?>">Rescues</a></li>
-                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="<?php echo esc_url( home_url( '/equipment_type/tanker/' ) ); ?>">Tankers</a></li>
-                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="<?php echo esc_url( home_url( '/equipment_type/cafs-dry-chem-arff/' ) ); ?>">CAFS / Dry Chem / ARFF</a></li>
+                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="<?php echo esc_url( home_url( '/equipment_type/used-pumpers-for-sale/' ) ); ?>">Engines / Pumpers</a></li>
+                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="<?php echo esc_url( home_url( '/equipment_type/used-aerial-trucks-for-sale/' ) ); ?>">Aerials / Quints</a></li>
+                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="<?php echo esc_url( home_url( '/equipment_type/brush-trucks-for-sale/' ) ); ?>">Wildland / Brush</a></li>
+                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="<?php echo esc_url( home_url( '/equipment_type/used-rescue-trucks-for-sale/' ) ); ?>">Rescues</a></li>
+                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="<?php echo esc_url( home_url( '/equipment_type/used-tankers-for-sale/' ) ); ?>">Tankers</a></li>
+                        <li class="footer__nav-item"><a class="footer__nav-lnk" href="<?php echo esc_url( home_url( '/equipment_type/cafs-dry-chem-trucks-for-sale/' ) ); ?>">CAFS / Dry Chem / ARFF</a></li>
                         <li class="footer__nav-item"><a class="footer__nav-lnk" href="https://globalemergencyvehicles.com/ambulance-for-sale/" target="_blank" rel="noopener noreferrer">Ambulances</a></li>
                     </ul>
                 </div>
