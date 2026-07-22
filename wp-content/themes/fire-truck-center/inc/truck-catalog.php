@@ -15,6 +15,35 @@ function ftc_get_truck_filter_form_id() {
 }
 
 /**
+ * Keep sold trucks at the end of every catalog result.
+ *
+ * Available and pending trucks are sorted by year (newest first). Sold trucks
+ * use the same year order, but are placed after all other statuses.
+ * A correlated lookup avoids changing the query's meta joins and therefore
+ * also works with Search & Filter's AJAX-generated queries.
+ *
+ * @param string   $orderby SQL ORDER BY clause.
+ * @param WP_Query $query   WordPress query.
+ * @return string
+ */
+function ftc_order_catalog_trucks_with_sold_last( $orderby, $query ) {
+	if ( ! $query->get( 'ftc_catalog_order' ) ) {
+		return $orderby;
+	}
+
+	global $wpdb;
+
+	return "CASE WHEN EXISTS (
+		SELECT 1
+		FROM {$wpdb->postmeta} AS ftc_status_meta
+		WHERE ftc_status_meta.post_id = {$wpdb->posts}.ID
+			AND ftc_status_meta.meta_key = 'status_sibgle'
+			AND LOWER(TRIM(ftc_status_meta.meta_value)) IN ('sold', 'sold out', 'sold-out', 'out-of-stock')
+	) THEN 1 ELSE 0 END ASC, CAST({$wpdb->postmeta}.meta_value AS UNSIGNED) DESC, {$wpdb->posts}.post_title ASC, {$wpdb->posts}.ID ASC";
+}
+add_filter( 'posts_orderby', 'ftc_order_catalog_trucks_with_sold_last', 20, 2 );
+
+/**
  * Enable Search & Filter's cascading option counts for the truck catalog.
  *
  * The versioned migration keeps the setting portable with the theme instead
@@ -373,6 +402,7 @@ function ftc_prepare_equipment_type_archive_query( $query ) {
 	$query->set( 'posts_per_page', -1 );
 	$query->set( 'ignore_sticky_posts', true );
 	$query->set( 'search_filter_id', ftc_get_truck_filter_form_id() );
+	$query->set( 'ftc_catalog_order', true );
 	$query->set( 'meta_key', '_year' );
 	$query->set( 'orderby', 'meta_value_num' );
 	$query->set( 'order', 'DESC' );
@@ -514,6 +544,11 @@ function ftc_scope_truck_filter_to_equipment_type( $query_args, $search_form_id 
 	if ( ftc_get_truck_filter_form_id() !== (int) $search_form_id ) {
 		return $query_args;
 	}
+
+	$query_args['ftc_catalog_order'] = true;
+	$query_args['meta_key']          = '_year';
+	$query_args['orderby']           = 'meta_value_num';
+	$query_args['order']             = 'DESC';
 
 	$archive_tax_query = array();
 	foreach ( array( 'equipment_type', 'truck_brands' ) as $taxonomy ) {

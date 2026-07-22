@@ -42,6 +42,7 @@ get_header();
 							'post_status'         => 'publish',
 							'posts_per_page'      => -1,
 							'search_filter_id'    => ftc_get_truck_filter_form_id(),
+							'ftc_catalog_order'   => true,
 							'meta_key'            => '_year',
 							'orderby'             => 'meta_value_num',
 							'order'               => 'DESC',
