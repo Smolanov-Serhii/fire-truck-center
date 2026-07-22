@@ -2,31 +2,103 @@
 
 > Fire Truck Center sells inspected used fire trucks and custom-built fire apparatus to fire departments and emergency services. Inventory includes pumpers, aerials, rescue trucks, tankers, wildland and brush trucks, and CAFS, dry chemical, and ARFF apparatus. Worldwide delivery, financing, inspections, pump tests, and aerial certifications are available.
 
+Fire Truck Center is located at 1991 Hartel Ave, Levittown, PA 19057, United States. Phone: +1 215-559-9119. Email: help@firetruck.center.
+
+Inventory links and availability below are generated automatically from published website content. The individual vehicle page is the authoritative source for current specifications, price, and availability.
+
 ## Primary pages
 
-- [Home](https://firetruck.center/): Company overview and featured fire trucks.
-- [Used Fire Trucks for Sale](https://firetruck.center/search-fire-truck-for-sale/): Complete current inventory with filters.
-- [Sell or Appraise Your Fire Truck](https://firetruck.center/sell-your-fire-truck/): Submit a vehicle for appraisal or sale.
-- [About Fire Truck Center](https://firetruck.center/about-us/): Company information.
-- [Contact Fire Truck Center](https://firetruck.center/contact-us/): Sales and support contacts.
-- [Frequently Asked Questions](https://firetruck.center/faq/): Common questions about buying and selling fire apparatus.
-- [Fire Truck Center Blog](https://firetruck.center/blog/): Guides and news about used fire apparatus.
+- [Home](https://firetruck.center.loc/): Company overview and featured fire trucks.
+- [Used Fire Trucks for Sale](https://firetruck.center.loc/search-fire-truck-for-sale/): Complete current inventory with filters.
+- [Fire Truck Brands](https://firetruck.center.loc/fire-truck-brands/): Browse current inventory by manufacturer.
+- [Sell or Appraise Your Fire Truck](https://firetruck.center.loc/sell-your-fire-truck/): Submit a vehicle for appraisal or sale.
+- [About Fire Truck Center](https://firetruck.center.loc/about-us/): Company information.
+- [Contact Fire Truck Center](https://firetruck.center.loc/contact-us/): Sales and support contacts.
+- [Frequently Asked Questions](https://firetruck.center.loc/faq/): Common questions about buying and selling fire apparatus.
 
-## Fire truck inventory by type
+## Current inventory by truck type
 
-- [Engines and Pumpers](https://firetruck.center/equipment_type/used-pumpers-for-sale/)
-- [Aerials and Quints](https://firetruck.center/equipment_type/used-aerial-trucks-for-sale/)
-- [Wildland and Brush Trucks](https://firetruck.center/equipment_type/brush-trucks-for-sale/)
-- [Rescue Trucks](https://firetruck.center/equipment_type/used-rescue-trucks-for-sale/)
-- [Tankers](https://firetruck.center/equipment_type/used-tankers-for-sale/)
-- [CAFS, Dry Chemical, and ARFF Trucks](https://firetruck.center/equipment_type/cafs-dry-chem-trucks-for-sale/)
+- [Aerials](https://firetruck.center.loc/equipment_type/aerials/): 12 current listings
+- [CAFS / Dry Chem / ARFF](https://firetruck.center.loc/equipment_type/cafs-dry-chem-arff/): 1 current listing
+- [Pumper](https://firetruck.center.loc/equipment_type/pumper/): 19 current listings
+- [Rescues](https://firetruck.center.loc/equipment_type/rescues/): 7 current listings
+- [Tanker](https://firetruck.center.loc/equipment_type/tanker/): 2 current listings
+- [Wildland / Brush / 4x4](https://firetruck.center.loc/equipment_type/wildland-brush-4x4/): 6 current listings
 
-## Additional resources
+## Current inventory by manufacturer
 
-- [XML Sitemap](https://firetruck.center/sitemap_index.xml): Index of crawlable website content.
+- [4 Guys](https://firetruck.center.loc/truck_brands/4-guys/): 1 current listing
+- [Chevrolet](https://firetruck.center.loc/truck_brands/chevrolet/): 2 current listings
+- [E-One](https://firetruck.center.loc/truck_brands/e-one/): 5 current listings
+- [Ferrara](https://firetruck.center.loc/truck_brands/ferrara/): 2 current listings
+- [Ford](https://firetruck.center.loc/truck_brands/ford/): 4 current listings
+- [GMC](https://firetruck.center.loc/truck_brands/gmc/): 2 current listings
+- [Grumman](https://firetruck.center.loc/truck_brands/grumman/): 1 current listing
+- [Hackney](https://firetruck.center.loc/truck_brands/hackney/): 1 current listing
+- [International](https://firetruck.center.loc/truck_brands/international/): 2 current listings
+- [KME](https://firetruck.center.loc/truck_brands/kme/): 1 current listing
+- [Pierce](https://firetruck.center.loc/truck_brands/pierce/): 9 current listings
+- [Ram](https://firetruck.center.loc/truck_brands/ram/): 1 current listing
+- [Rosenbauer](https://firetruck.center.loc/truck_brands/rosenbauer/): 5 current listings
+- [Seagrave](https://firetruck.center.loc/truck_brands/seagrave/): 1 current listing
+- [Sutphen](https://firetruck.center.loc/truck_brands/sutphen/): 2 current listings
 
-## Contact
+## Current available inventory
 
-- Phone: +1 215-559-9119
-- Email: help@firetruck.center
-- Address: 1991 Hartel Ave, Levittown, PA 19057, United States
+- [Custom-Built Brush Trucks](https://firetruck.center.loc/truck/custom-built-brush-trucks-ftc/): Type: Wildland / Brush / 4x4; Make: Ford; Year: 2025; SKU: Fire and rescue tucks on Ford, Ram or Chevy chassis.; Price: 120000; Availability: in stock
+- [2019 International Deep South Wildland](https://firetruck.center.loc/truck/2019-international-deep-south-wildland/): Type: Pumper, Wildland / Brush / 4x4; Make: International; Year: 2019; Mileage: 28417 miles; SKU: F041; Price: 249000; Availability: in stock
+- [2017 Rosenbauer Commander](https://firetruck.center.loc/truck/truck-2017-rosenbauer-commander/): Type: Pumper, Tanker; Make: Rosenbauer; Year: 2017; Mileage: 81358 miles; SKU: F043; Price: 349000; Availability: sale pending
+- [2017 Rosenbauer Commander](https://firetruck.center.loc/truck/2017-rosenbauer-commander/): Type: Pumper; Make: Rosenbauer; Year: 2017; Mileage: 67200 miles; SKU: F042; Price: 295000; Availability: in stock
+- [2017 Rosenbauer Commander Pumper](https://firetruck.center.loc/truck/2017-rosenbauer-commander-pumper/): Type: Pumper; Make: Rosenbauer; Year: 2017; Mileage: 78731 miles; SKU: F052; Price: 295000; Availability: in stock
+- [2016 4 Guys Spartan](https://firetruck.center.loc/truck/2016-4-guys-spartan-fire-truck/): Type: Pumper; Make: 4 Guys; Year: 2016; Mileage: 83875 miles; SKU: F031; Price: 275000; Availability: in stock
+- [2016 International 7400 SBA 6×4 Tanker](https://firetruck.center.loc/truck/2016-international-7400-sba-6x4-tanker/): Type: Pumper, Tanker; Make: International; Year: 2016; Mileage: 78986 miles; SKU: F018; Price: 80000; Availability: in stock
+- [2015 Ram 5500 Brush Truck CAFS](https://firetruck.center.loc/truck/2015-ram-5500-brush-truck-cafs/): Type: Wildland / Brush / 4x4; Make: Ram; Year: 2015; Mileage: 15900 miles; SKU: F060; Price: 159000; Availability: in stock
+- [2014 Ford F-550 Spartan Rescue](https://firetruck.center.loc/truck/2014-ford-f-550-spartan-rescue/): Type: Rescues; Make: Ford; Year: 2014; Mileage: 17047 miles; SKU: F050; Price: 98000; Availability: in stock
+- [2013 Kenworth Pierce](https://firetruck.center.loc/truck/2013-kenworth-pierce-249k/): Type: Pumper; Make: Pierce; Year: 2013; Mileage: 67126 miles; SKU: F001; Price: 179000; Availability: in stock
+- [2012 Freightliner Ferrara 4×4](https://firetruck.center.loc/truck/2012-freightliner-ferrara-4x4-249k/): Type: Pumper, Wildland / Brush / 4x4; Make: Ferrara; Year: 2012; Mileage: 53000 miles; SKU: F002; Price: 179000; Availability: in stock
+- [2013 Rosenbauer Spartan Pumper](https://firetruck.center.loc/truck/2013-rosenbauer-spartan-pumper/): Type: Pumper; Make: Rosenbauer; Year: 2012; Mileage: 81430 miles; SKU: F038; Price: 225000; Availability: in stock
+- [2011 Pierce Velocity Aerial (75’)](https://firetruck.center.loc/truck/2011-pierce-velocity-aerial-105/): Type: Aerials, Pumper; Make: Pierce; Year: 2011; Mileage: 63994 miles; SKU: F051; Availability: in stock
+- [2010 E-One Custom Pumper](https://firetruck.center.loc/truck/2010-e-one-custom-pumper-truck/): Type: Pumper; Make: E-One; Year: 2010; Mileage: 81123 miles; SKU: F036; Price: 149000; Availability: in stock
+- [2010 Rosenbauer Rescue Pumper](https://firetruck.center.loc/truck/2010-rosenbauer-rescue-pumper-f020/): Type: Pumper, Rescues; Make: Rosenbauer; Year: 2010; Mileage: 96000 miles; SKU: F020; Price: 95000; Availability: in stock
+- [2009 E-One 135’ Aerial](https://firetruck.center.loc/truck/2009-e-one-135-aerial-149k/): Type: Aerials; Make: E-One; Year: 2009; Mileage: 64879 miles; SKU: F006; Price: 99000; Availability: in stock
+- [2009 E-One Quest Aerial](https://firetruck.center.loc/truck/2009-e-one-quest-aerial-fire-truck-sale/): Type: Aerials; Make: E-One; Year: 2009; Mileage: 85973 miles; SKU: F030; Price: 99000; Availability: in stock
+- [2009 Ferrara Custom](https://firetruck.center.loc/truck/2009-ferrara-custom-119k/): Type: Pumper; Make: Ferrara; Year: 2009; Mileage: 110223 miles; SKU: F007; Price: 79000; Availability: in stock
+- [2009 GMC C5500 4×4 Pierce Contender Rescue](https://firetruck.center.loc/truck/2009-gmc-c5500-4x4-rescue/): Type: Rescues; Make: Pierce; Year: 2009; Mileage: 27000 miles; SKU: F062; Price: 98000; Availability: in stock
+- [2009 Saber Pierce Skyboom – SOLD](https://firetruck.center.loc/truck/2009-pierce-skyboom-199k/): Type: Aerials; Make: Pierce; Year: 2009; Mileage: 42510 miles; SKU: F005; Price: 249000; Availability: sale pending
+- [2009 Seagrave Pumper-SOLD](https://firetruck.center.loc/truck/2009-seagrave-pumper/): Type: Pumper; Make: Seagrave; Year: 2009; Mileage: 66000 miles; SKU: F032; Price: 159000; Availability: in stock
+- [2008 Pierce Contender GMC 4×4](https://firetruck.center.loc/truck/2008-gmc-c5500-4x4-mini-pumper-brush/): Type: Pumper; Make: GMC; Year: 2008; Mileage: 63000 miles; SKU: F026; Price: 98000; Availability: in stock
+- [2008 Pierce Contender Pumper](https://firetruck.center.loc/truck/2008-pierce-contender-pumper-2/): Type: Pumper; Make: Pierce; Year: 2008; Mileage: 52567 miles; SKU: F039; Price: 145000; Availability: in stock
+- [2008 Spartan Hackney Rescue Truck](https://firetruck.center.loc/truck/2008-spartan-rescue-truck-for-sale/): Type: Rescues; Make: Hackney; Year: 2008; Mileage: 27390 miles; SKU: F037; Price: 149000; Availability: in stock
+- [2007 Chevrolet C8500 Pumper](https://firetruck.center.loc/truck/2007-chevrolet-c8500-pumper-fire-truck/): Type: Pumper; Make: Chevrolet; Year: 2007; Mileage: 8381 miles; SKU: F061; Price: 99000; Availability: in stock
+- [2007 E-One Bronto](https://firetruck.center.loc/truck/2007-e-one-bronto-249k/): Type: Aerials; Make: E-One; Year: 2007; Mileage: 27000 miles; SKU: F009; Price: 249000; Availability: in stock
+- [2007 KME AerialCat Aerial](https://firetruck.center.loc/truck/2007-kme-aerialcat-aerial/): Type: Aerials; Make: KME; Year: 2007; Mileage: 49000 miles; SKU: F028; Price: 249000; Availability: in stock
+- [2007 Sutphen 75′ Aerial Ladder](https://firetruck.center.loc/truck/2007-sutphen-75-aerial-ladder/): Type: Aerials; Make: Sutphen; Year: 2007; Mileage: 75346 miles; SKU: F068; Price: 249000; Availability: in stock
+- [2006 Chevrolet C5500 4×4 Wet Rescue](https://firetruck.center.loc/truck/2006-chevrolet-c5500-4x4-wet-rescue/): Type: Rescues, Wildland / Brush / 4x4; Make: Chevrolet; Year: 2006; Mileage: 27905 miles; SKU: F056; Price: 95000; Availability: in stock
+- [2006 Ford F-750 4×4 Dry Chemical & Foam Truck](https://firetruck.center.loc/truck/2006-ford-f-750-dry-chemical-foam-truck-f025/): Type: CAFS / Dry Chem / ARFF, Rescues; Make: Ford; Year: 2006; Mileage: 23169 miles; SKU: F025; Price: 95000; Availability: in stock
+- [2006 GMC C8500 Rescue](https://firetruck.center.loc/truck/2006-gmc-c8500-utility-support-truck/): Type: Rescues; Make: GMC; Year: 2006; Mileage: 52454 miles; SKU: F063; Price: 89000; Availability: in stock
+- [2006 Pierce 75’ Quint](https://firetruck.center.loc/truck/2006-pierce-75-quint-295k/): Type: Aerials; Make: Pierce; Year: 2006; Mileage: 50000 miles; SKU: F011; Price: 195000; Availability: in stock
+- [2004 Freightliner FL80](https://firetruck.center.loc/truck/2004-freightliner-fl80-39k/): Type: Pumper; Make: E-One; Year: 2004; Mileage: 114000 miles; SKU: F012; Price: 49000; Availability: in stock
+- [2002 Ford F550 4×4 Brush – 7.3L – SALE PENDING](https://firetruck.center.loc/truck/2002-f550-4x4-brush-7-3l-69k/): Type: Wildland / Brush / 4x4; Make: Ford; Year: 2002; SKU: F013; Price: 59000; Availability: in stock
+- [2002 Pierce Quantum Aerial](https://firetruck.center.loc/truck/2002-pierce-quantum-aerial-f029/): Type: Aerials; Make: Pierce; Year: 2002; Mileage: 59000 miles; SKU: F029; Price: 129000; Availability: in stock
+- [2001 Pierce 85’ Platform](https://firetruck.center.loc/truck/2001-pierce-85-platform-99k/): Type: Aerials; Make: Pierce; Year: 2001; Mileage: 75055 miles; SKU: F014; Price: 95000; Availability: in stock
+- [2000 Suthphen Custom Aerial](https://firetruck.center.loc/truck/2000-suthphen-custom-aerial-f023/): Type: Aerials; Make: Sutphen; Year: 2000; Mileage: 48955 miles; SKU: F023; Price: 95000; Availability: in stock
+- [1996 Saber Pierce Pumper](https://firetruck.center.loc/truck/1996-pierce-pumper-49k/): Type: Pumper; Make: Pierce; Year: 1996; Mileage: 21270 miles; SKU: F015; Price: 49000; Availability: in stock
+- [1989 Grumman 102’ Platform](https://firetruck.center.loc/truck/1989-grummann-102-platform-29k/): Type: Aerials; Make: Grumman; Year: 1989; Mileage: 23310 miles; SKU: F016; Price: 19000; Availability: in stock
+
+## Optional
+
+- [Fire Truck Center Blog](https://firetruck.center.loc/blog/): Guides and news about used fire apparatus.
+- [Privacy Policy](https://firetruck.center.loc/privacy-policy-2/)
+- [Used Tanker Truck for Sale: The Smart 2026 Buy for Rural Departments](https://firetruck.center.loc/used-tanker-truck-for-sale-2026/)
+- [Used Ladder Truck for Sale: The Smart 2026 Buy](https://firetruck.center.loc/used-ladder-truck-for-sale-2026/)
+- [The Fire Truck Pricing Crisis: Why Used Apparatus Is the Smart Buy in 2026](https://firetruck.center.loc/used-fire-trucks-for-sale-pricing-crisis-2026/)
+- [How Much Does a Used Fire Truck Cost? (2026 Price Guide)](https://firetruck.center.loc/how-much-does-a-used-fire-truck-cost/)
+- [FDIC 2025: Exploring the Future of Fire Apparatus](https://firetruck.center.loc/fdic-2025-the-future-of-fire-apparatus/)
+- [Why to Buy a Used Fire Truck is the Best Choice for Your Department](https://firetruck.center.loc/why-to-buy-used-fire-truck/)
+- [Rescue Fire Trucks: The Heroes on the Front Lines](https://firetruck.center.loc/rescue-fire-trucks/)
+- [Quint Fire Trucks: A Comprehensive Guide](https://firetruck.center.loc/quint-fire-trucks-guide/)
+- [What Are Brush Trucks? Essential Firefighting Vehicles!](https://firetruck.center.loc/what-is-brush-truck/)
+- [Aerial Fire Trucks: The Essential High-Reach Heroes](https://firetruck.center.loc/aerial-fire-trucks-essential-heroes/)
+- [Fire Engines (Pumpers): The Backbone of Firefighting](https://firetruck.center.loc/fire-trucks-pumpers/)
+- [A Guide to Fire Truck Types](https://firetruck.center.loc/a-guide-to-fire-truck-types/)
+- [XML Sitemap](https://firetruck.center.loc/sitemap_index.xml): Index of crawlable website content.

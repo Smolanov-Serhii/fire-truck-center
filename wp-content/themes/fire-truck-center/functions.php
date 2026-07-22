@@ -195,6 +195,7 @@ require get_template_directory() . '/inc/template-functions.php';
  */
 require get_template_directory() . '/inc/truck-catalog.php';
 require get_template_directory() . '/inc/seo.php';
+require get_template_directory() . '/inc/llms.php';
 
 /**
  * Customizer additions.
