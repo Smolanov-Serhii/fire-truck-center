@@ -9,7 +9,7 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.4.1' );
+	define( '_S_VERSION', '1.4.8' );
 }
 
 /**
@@ -145,6 +145,13 @@ function fire_truck_center_scripts() {
 	wp_style_add_data( 'fire-truck-center-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'fire-truck-center-navigation', get_template_directory_uri() . '/dist/js/common.js', array(), _S_VERSION, true );
+	wp_localize_script(
+		'fire-truck-center-navigation',
+		'ftcTruckCatalog',
+		array(
+			'ajaxUrl' => admin_url( 'admin-ajax.php' ),
+		)
+	);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

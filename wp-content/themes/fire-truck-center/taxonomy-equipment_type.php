@@ -1,19 +1,20 @@
 <?php
 /**
- * Truck Type taxonomy archive.
+ * Truck Type and Truck Brand taxonomy archive layout.
  *
  * @package Fire_Truck_Center
  */
 
-$truck_type      = get_queried_object();
+$archive_term    = get_queried_object();
+$archive_taxonomy = $archive_term instanceof WP_Term ? $archive_term->taxonomy : 'equipment_type';
 $catalog_page_id = ftc_get_truck_catalog_page_id();
 $banner_image    = $catalog_page_id && function_exists( 'get_field' ) ? get_field( 'image_banner', $catalog_page_id ) : '';
 $banner_subtitle = $catalog_page_id && function_exists( 'get_field' ) ? get_field( 'subtitle_banner', $catalog_page_id ) : '';
-$top_content     = $truck_type instanceof WP_Term && function_exists( 'get_field' ) ? get_field( 'top_content', $truck_type ) : '';
-$bottom_content  = $truck_type instanceof WP_Term && function_exists( 'get_field' ) ? get_field( 'bottom_content', $truck_type ) : '';
+$top_content     = $archive_term instanceof WP_Term && function_exists( 'get_field' ) ? get_field( 'top_content', $archive_term ) : '';
+$bottom_content  = $archive_term instanceof WP_Term && function_exists( 'get_field' ) ? get_field( 'bottom_content', $archive_term ) : '';
 
-if ( ! $bottom_content && $truck_type instanceof WP_Term ) {
-	$bottom_content = term_description( $truck_type->term_id, 'equipment_type' );
+if ( ! $bottom_content && $archive_term instanceof WP_Term ) {
+	$bottom_content = term_description( $archive_term->term_id, $archive_taxonomy );
 }
 
 if ( is_array( $banner_image ) && ! empty( $banner_image['url'] ) ) {
@@ -22,11 +23,11 @@ if ( is_array( $banner_image ) && ! empty( $banner_image['url'] ) ) {
 	$banner_image = wp_get_attachment_image_url( (int) $banner_image, 'full' );
 }
 
-$archive_title = $truck_type instanceof WP_Term
+$archive_title = $archive_term instanceof WP_Term
 	? sprintf(
-		/* translators: %s: truck type term name. */
+		/* translators: %s: truck taxonomy term name. */
 		__( '%s Fire Trucks for Sale', 'fire-truck-center' ),
-		$truck_type->name
+		$archive_term->name
 	)
 	: __( 'Fire Trucks for Sale', 'fire-truck-center' );
 
@@ -51,7 +52,7 @@ get_header();
 
 	<div class="sale sale--taxonomy">
 		<?php if ( $top_content ) : ?>
-			<section class="sale__term-content sale__term-content--top main-container" aria-label="<?php esc_attr_e( 'Truck type overview', 'fire-truck-center' ); ?>">
+			<section class="sale__term-content sale__term-content--top main-container" aria-label="<?php esc_attr_e( 'Inventory overview', 'fire-truck-center' ); ?>">
 				<div class="sale__term-content-inner">
 					<?php echo wp_kses_post( $top_content ); ?>
 				</div>
@@ -87,7 +88,7 @@ get_header();
 		</div>
 
 		<?php if ( $bottom_content ) : ?>
-			<section class="sale__term-content sale__term-content--bottom main-container" aria-label="<?php esc_attr_e( 'About this truck type', 'fire-truck-center' ); ?>">
+			<section class="sale__term-content sale__term-content--bottom main-container" aria-label="<?php esc_attr_e( 'About this inventory', 'fire-truck-center' ); ?>">
 				<div class="sale__term-content-inner">
 					<?php echo wp_kses_post( $bottom_content ); ?>
 				</div>

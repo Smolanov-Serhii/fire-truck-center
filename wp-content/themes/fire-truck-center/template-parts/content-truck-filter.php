@@ -12,6 +12,7 @@
 		</svg>
 	</button>
 	<?php get_template_part( 'template-parts/content', 'truck-types' ); ?>
+	<?php get_template_part( 'template-parts/content', 'truck-brands' ); ?>
 	<?php
 	if ( shortcode_exists( 'searchandfilter' ) ) {
 		echo do_shortcode( '[searchandfilter id="' . ftc_get_truck_filter_form_id() . '"]' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped

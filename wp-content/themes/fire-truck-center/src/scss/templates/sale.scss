@@ -498,3 +498,10 @@
     }
   }
 }
+
+// The opposite taxonomy stays in the Search & Filter form so it can drive
+// AJAX results, while the matching custom selector provides the visible UI.
+body.tax-equipment_type .sale__sidebar .searchandfilter .sf-field-taxonomy-truck_brands,
+body.tax-truck_brands .sale__sidebar .searchandfilter .sf-field-taxonomy-equipment_type{
+  display: none;
+}
