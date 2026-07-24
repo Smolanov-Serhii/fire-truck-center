@@ -161,6 +161,7 @@ $post_id = get_the_ID();
                 </div>
             </div>
         </section>
+        <?php get_template_part( 'template-parts/content', 'form' ); ?>
     </main>
 <?php
 get_footer();
