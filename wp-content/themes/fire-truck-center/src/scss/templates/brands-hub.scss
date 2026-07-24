@@ -531,4 +531,294 @@
       }
     }
   }
+
+  &__text {
+    border-top: 1px solid #e6e8e9;
+    background: #fff;
+  }
+
+  // Backward compatibility for the old production markup where the content
+  // was rendered directly inside .brands-hub__text.main-container.
+  &__text.main-container {
+    max-width: 1432px;
+    padding-top: 96px;
+    padding-bottom: 110px;
+
+    @media all and (max-width: 1024px) {
+      padding-top: 72px;
+      padding-bottom: 82px;
+    }
+
+    @media all and (max-width: 600px) {
+      padding-top: 54px;
+      padding-bottom: 62px;
+    }
+  }
+
+  &__text-inner {
+    padding-top: 96px;
+    padding-bottom: 110px;
+
+    @media all and (max-width: 1024px) {
+      padding-top: 72px;
+      padding-bottom: 82px;
+    }
+
+    @media all and (max-width: 600px) {
+      padding-top: 54px;
+      padding-bottom: 62px;
+    }
+  }
+
+  &__article-content {
+    max-width: 1120px;
+  }
+
+  &__article-content,
+  &__text.main-container {
+    margin: 0 auto;
+    color: #213540;
+    font-size: 18px;
+    line-height: 1.65;
+
+    > :first-child {
+      margin-top: 0;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+
+    p {
+      margin: 0 0 22px;
+      color: #465860;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.65;
+    }
+
+    h2 {
+      margin: 58px 0 21px;
+      color: #17242b;
+      font-size: 34px;
+      font-weight: 750;
+      line-height: 1.18;
+      letter-spacing: -0.02em;
+      text-transform: none;
+    }
+
+    h3 {
+      margin: 42px 0 17px;
+      color: #17242b;
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    h4,
+    h5,
+    h6 {
+      margin: 31px 0 10px;
+      color: #17242b;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    a {
+      color: #b9222b;
+      font-size: inherit;
+      font-weight: inherit;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+      transition: color 0.2s ease;
+
+      &:hover,
+      &:focus-visible {
+        color: #7f1118;
+      }
+    }
+
+    ul,
+    ol {
+      margin: 0 0 28px;
+      padding-left: 1.45em;
+    }
+
+    ul li,
+    ol li {
+      display: list-item;
+      margin: 0 0 10px;
+      color: #465860;
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    ul li {
+      list-style: disc;
+
+      &::marker {
+        color: #c92d36;
+      }
+    }
+
+    ol li {
+      list-style: decimal;
+    }
+
+    strong {
+      color: #17242b;
+      font-weight: 700;
+    }
+
+    > div {
+      font-size: inherit;
+      line-height: inherit;
+
+      h2:first-child,
+      h3:first-child,
+      p:first-child {
+        margin-top: 0;
+      }
+
+      > :last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    // The classic editor stores this callout with inline padding. Override
+    // only the direct content box that starts with a heading (Key Takeaways).
+    > div:has(> h2:first-child) {
+      margin: 34px 0 50px !important;
+      padding: 27px 34px 25px !important;
+      border-left-width: 5px !important;
+      border-radius: 0 8px 8px 0 !important;
+      background: linear-gradient(135deg, #f7f8f9 0%, #f0f3f4 100%) !important;
+      box-shadow: 0 14px 35px rgba(23, 36, 43, 0.08);
+
+      h2 {
+        margin: 0 0 17px;
+        font-size: 29px;
+        line-height: 1.15;
+      }
+
+      ul,
+      ol {
+        margin-bottom: 0;
+      }
+
+      li:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .wp-block-table {
+      max-width: 100%;
+      margin: 36px 0 40px;
+      overflow-x: auto;
+      border: 1px solid #d9dfe2;
+      background: #fff;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+      width: 100%;
+      min-width: 820px;
+      margin: 0;
+      border-collapse: collapse;
+      font-size: 16px;
+      line-height: 1.45;
+    }
+
+    table th,
+    table td {
+      min-width: 165px;
+      padding: 14px 16px;
+      border: 1px solid #d9dfe2;
+      font-size: 15px;
+      line-height: 1.45;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    table th {
+      color: #fff;
+      font-weight: 700;
+    }
+
+    table td {
+      color: #354950;
+      font-weight: 400;
+    }
+
+    table td:first-child {
+      color: #17242b;
+      font-weight: 700;
+    }
+
+    @media all and (max-width: 768px) {
+      font-size: 16px;
+
+      p {
+        margin-bottom: 19px;
+        font-size: 16px;
+        line-height: 1.62;
+      }
+
+      h2 {
+        margin-top: 44px;
+        font-size: 28px;
+      }
+
+      h3 {
+        margin-top: 34px;
+        font-size: 23px;
+      }
+
+      h4,
+      h5,
+      h6 {
+        margin-top: 27px;
+        font-size: 18px;
+      }
+
+      ul li,
+      ol li {
+        font-size: 15px;
+      }
+
+      > div:has(> h2:first-child) {
+        margin: 28px 0 40px !important;
+        padding: 23px 25px 21px !important;
+
+        h2 {
+          font-size: 25px;
+        }
+      }
+    }
+
+    @media all and (max-width: 500px) {
+      h2 {
+        font-size: 25px;
+      }
+
+      .wp-block-table {
+        width: calc(100% + 20px);
+        max-width: none;
+        margin-right: -20px;
+      }
+
+      table {
+        min-width: 720px;
+      }
+
+      > div:has(> h2:first-child) {
+        width: calc(100% + 10px);
+        margin-left: -10px !important;
+        padding: 21px 20px 19px !important;
+      }
+    }
+  }
 }
